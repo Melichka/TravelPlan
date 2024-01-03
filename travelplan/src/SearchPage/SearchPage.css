@@ -11,23 +11,32 @@ html {
 }
 
 h1 {
-
+  display: flex;
   font-family: 'Righteous';
   font-style: normal;
   font-weight: 400;
   font-size: 85px;
   line-height: 106px;
-  color: #8B003F;
-
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .title {
-
   display: flex;
-  justify-content: center;
-  align-self: center;
-  font-family: "Righteous";
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 60%;
+}
 
+.upper-title {
+  display: flex;
+  color: #8B003F;
+}
+
+.bottom-title {
+  display: flex;
+  align-self: flex-end;
+  color: #A65400;
 }
 
 .search-page {
@@ -35,10 +44,18 @@ h1 {
   width: 100%;
   height: 100vh;
   justify-content: space-around;
-  flex-flow: column wrap;
+  flex-direction: column;
   background-image: url(Bubble.svg);
   background-repeat: no-repeat;
+}
 
+.search-page-assets {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  align-self: center;
+  align-content: stretch;
+  flex-wrap: wrap;
 }
 
 .search-bar {
@@ -55,10 +72,31 @@ h1 {
 .search-page-buttons {
   display: flex;
   justify-content: flex-end;
+  margin-right: 3%;
 }
 
 .text-button-style {
   font-family: "Roboto";
   font-size: 24px;
   color: #A61700;
+}
+
+.search-page-image {
+  display: flex;
+  width: 40%;
+  height: 40vh;
+  background-image: url(Limon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.search-page-main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.space {
+  display: flex;
+  flex-basis: 40%;
 }

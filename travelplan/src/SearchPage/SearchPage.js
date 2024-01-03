@@ -11,38 +11,45 @@ function SearchPage() {
   return (
     <div className="search-page">
       <div className="search-page-buttons">
-        <Button className={`button-style ${classes.buttonStyle}`} variant="outlined" id="main-button-style">
+        <Button
+          className={`button-style ${classes.buttonStyle}`}
+          variant="outlined"
+          id="main-button-style"
+        >
           <Typography className="text-button-style">{SIGN_IN}</Typography>
         </Button>
         <Button className="button-style">
           <Typography className="text-button-style">{SUPPORT}</Typography>
         </Button>
       </div>
-      <div id="title">
-        <h1> Oompa Loompas </h1>
+      <div className="search-page-main">
+        <div className="search-page-assets">
+          <div className="search-page-image"></div>
+          <div className="title">
+            <h1 className="upper-title"> Oompa </h1>
+            <h1 className="bottom-title">Loompas</h1>
+          </div>
+        </div>
+        <div className="search-bar">
+          <TextField
+            id="input-text-field"
+            placeholder="Введите страну, город или место..."
+            inputProps
+            className={classes.textField}
+            variant="outlined"
+            type="text"
+            fullWidth
+            InputProps={{
+              startAdornment: (
+                <Button>
+                  <SearchIcon />
+                </Button>
+              ),
+            }}
+          />
+        </div>
       </div>
-      <div>
-        <img src="./Limon.svg" alt="Limon"></img>
-      </div>
-
-      <div className="search-bar">
-        <TextField
-          id="input-text-field"
-          placeholder="Введите страну, город или место..."
-          inputProps
-          className={classes.textField}
-          variant="outlined"
-          type="text"
-          fullWidth
-          InputProps={{
-            startAdornment: (
-              <Button>
-                <SearchIcon />
-              </Button>
-            ),
-          }}
-        />
-      </div>
+      <div className="space"></div>
     </div>
   );
 }
