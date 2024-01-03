@@ -12,7 +12,7 @@ html {
 
 h1 {
 
- font-family: 'Righteous';
+  font-family: 'Righteous';
   font-style: normal;
   font-weight: 400;
   font-size: 85px;
@@ -20,42 +20,45 @@ h1 {
   color: #8B003F;
 
 }
+
 .title {
+
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-family: 'Righteous';
+  align-self: center;
+  font-family: "Righteous";
+
 }
 
 .search-page {
   display: flex;
   width: 100%;
   height: 100vh;
-  flex-direction: column;
   justify-content: space-around;
+  flex-flow: column wrap;
   background-image: url(Bubble.svg);
   background-repeat: no-repeat;
 
 }
 
-
-
 .search-bar {
   display: flex;
-  width: 60%; 
+  width: 60%;
   justify-content: center;
-  align-items: center;
-
+  align-self: center;
   background-color: white;
   border-radius: 50px;
-  border-color: #A61700;
   border: 1px solid #A61700;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .search-page-buttons {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
 }
- 
+
+.text-button-style {
+  font-family: "Roboto";
+  font-size: 24px;
+  color: #A61700;
+}
