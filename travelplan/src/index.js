@@ -1,8 +1,7 @@
-import React from 'react';
-import SearchPage from './SearchPage/SearchPage';
+import React from "react";
+import SearchPage from "./SearchPage/SearchPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import ReactDOM from "react-dom/client"
-import './fonts/Righteous-Regular.ttf'
 import "./index.css"
 
 function App() {
