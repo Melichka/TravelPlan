@@ -1,27 +1,25 @@
 import React from "react";
-import { TextField, Button, Typography } from "@material-ui/core";
-import SearchIcon from "@material-ui/icons/Search";
-import useStyles from "./SearchPageStyles.js";
+
+import { Button, TextField, Typography } from "@mui/material"
+import SearchIcon from '@mui/icons-material/Search';
+
+import { SignInButton } from "../../components/SignInButton";
+
+import { SUPPORT } from "./constants";
+
 import "./SearchPage.css";
-import { SIGN_IN, SUPPORT } from "./Constants.js";
 
-function SearchPage() {
-  const classes = useStyles();
-
+export function SearchPage() {
   return (
     <div className="search-page">
       <div className="search-page-buttons">
-        <Button
-          className={`button-style ${classes.buttonStyle}`}
-          variant="outlined"
-          id="main-button-style"
-        >
-          <Typography className="text-button-style">{SIGN_IN}</Typography>
-        </Button>
+        <SignInButton />
+
         <Button className="button-style">
           <Typography className="text-button-style">{SUPPORT}</Typography>
         </Button>
       </div>
+
       <div className="search-page-main">
         <div className="search-page-assets">
           <div className="search-page-image"></div>
@@ -34,8 +32,7 @@ function SearchPage() {
           <TextField
             id="input-text-field"
             placeholder="Введите страну, город или место..."
-            inputProps
-            className={classes.textField}
+            className="text-field"
             variant="outlined"
             type="text"
             fullWidth
@@ -49,9 +46,9 @@ function SearchPage() {
           />
         </div>
       </div>
+
       <div className="space"></div>
     </div>
   );
 }
 
-export default SearchPage;
