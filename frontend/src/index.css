@@ -1,6 +1,9 @@
+@import '@fontsource/righteous';
+@import '@fontsource/roboto';
+
 body {
   margin: 0;
-  font-family:'Roboto';
+  font-family: 'Roboto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,9 +13,25 @@ code {
     monospace;
 }
 
-@font-face {
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFBA73;
+
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  display: flex;
   font-family: 'Righteous';
-  src: local('Righteous'),
-    url('./fonts/Righteous-Regular.ttf') format('truetype');
-  font-weight: bold;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 85px;
+  line-height: 106px;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
