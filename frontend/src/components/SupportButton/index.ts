@@ -1,1 +1,1 @@
-export * from './SuttortButton';
+export * from './SupportButton';

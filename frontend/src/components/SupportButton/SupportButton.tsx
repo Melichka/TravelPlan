@@ -8,12 +8,8 @@ import './styles.css';
 
 export const SupportButton = () => {
     return (
-        <Button
-            className="button-style"
-            variant="outlined"
-        >
+        <Button>
             <Typography className="text-button-style">{SUPPORT}</Typography>
         </Button>
     )
 }
-

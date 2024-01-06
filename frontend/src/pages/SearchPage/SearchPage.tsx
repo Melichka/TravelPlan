@@ -1,10 +1,11 @@
 import React from "react";
 
-import { Button, TextField, Typography } from "@mui/material"
-import SearchIcon from '@mui/icons-material/Search';
+import { Button, TextField, Typography } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 
 import { SignInButton } from "../../components/SignInButton";
 import { SupportButton } from "../../components/SupportButton";
+import { Title } from "../../components/Title";
 
 import "./SearchPage.css";
 
@@ -18,11 +19,8 @@ export function SearchPage() {
 
       <div className="search-page-main">
         <div className="search-page-assets">
-          <div className="search-page-image"></div>
-          <div className="title">
-            <h1 className="upper-title"> Oompa </h1>
-            <h1 className="bottom-title">Loompas</h1>
-          </div>
+          <div className="search-page-image" />
+          <Title />
         </div>
         <div className="search-bar">
           <TextField
@@ -47,4 +45,3 @@ export function SearchPage() {
     </div>
   );
 }
-
