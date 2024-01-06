@@ -1,8 +1,6 @@
 import React from "react";
 
-import { Button, TextField, Typography } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-
+import { SearchBar } from "../../components/SearchBar";
 import { SignInButton } from "../../components/SignInButton";
 import { SupportButton } from "../../components/SupportButton";
 import { Title } from "../../components/Title";
@@ -16,31 +14,13 @@ export function SearchPage() {
         <SignInButton />
         <SupportButton />
       </div>
-
       <div className="search-page-main">
         <div className="search-page-assets">
           <div className="search-page-image" />
           <Title />
         </div>
-        <div className="search-bar">
-          <TextField
-            id="input-text-field"
-            placeholder="Введите страну, город или место..."
-            className="text-field"
-            variant="outlined"
-            type="text"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <Button>
-                  <SearchIcon />
-                </Button>
-              ),
-            }}
-          />
-        </div>
+        <SearchBar />
       </div>
-
       <div className="space"></div>
     </div>
   );
