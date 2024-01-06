@@ -4,8 +4,7 @@ import { Button, TextField, Typography } from "@mui/material"
 import SearchIcon from '@mui/icons-material/Search';
 
 import { SignInButton } from "../../components/SignInButton";
-
-import { SUPPORT } from "./constants";
+import { SupportButton } from "../../components/SupportButton";
 
 import "./SearchPage.css";
 
@@ -14,10 +13,7 @@ export function SearchPage() {
     <div className="search-page">
       <div className="search-page-buttons">
         <SignInButton />
-
-        <Button className="button-style">
-          <Typography className="text-button-style">{SUPPORT}</Typography>
-        </Button>
+        <SupportButton />
       </div>
 
       <div className="search-page-main">
