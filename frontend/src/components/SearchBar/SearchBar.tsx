@@ -16,10 +16,23 @@ export const SearchBar = () => {
         variant="outlined"
         type="text"
         fullWidth
+        sx={{
+          "& .MuiOutlinedInput-root": {
+            borderRadius: 50, // Установка радиуса в 50
+            borderColor: "#A61700", // Установка цвета рамки
+          },
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#A61700", // Также установка цвета рамки для активного состояния
+          },
+        }}
         InputProps={{
           startAdornment: (
             <Button>
-              <SearchIcon />
+              <SearchIcon
+                sx={{
+                  color: "black",
+                }}
+              />
             </Button>
           ),
         }}
