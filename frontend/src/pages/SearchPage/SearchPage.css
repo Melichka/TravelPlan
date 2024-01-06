@@ -17,8 +17,6 @@
   flex-wrap: wrap;
 }
 
-
-
 .search-page-buttons {
   display: flex;
   justify-content: flex-end;
@@ -45,9 +43,3 @@
   justify-content: space-between;
   flex-direction: column;
 }
-
-.space {
-  display: flex;
-  flex-basis: 40%;
-}
-

@@ -2,6 +2,7 @@ import React from "react";
 
 import { SearchBar } from "../../components/SearchBar";
 import { SignInButton } from "../../components/SignInButton";
+import { Space } from "../../components/Space";
 import { SupportButton } from "../../components/SupportButton";
 import { Title } from "../../components/Title";
 
@@ -21,7 +22,7 @@ export function SearchPage() {
         </div>
         <SearchBar />
       </div>
-      <div className="space"></div>
+      <Space />
     </div>
   );
 }
