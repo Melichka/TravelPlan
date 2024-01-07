@@ -6,7 +6,7 @@ import { Space } from "../../components/Space";
 import { SupportButton } from "../../components/SupportButton";
 import { Title } from "../../components/Title";
 
-import "./SearchPage.css";
+import "./styles.css";
 
 export function SearchPage() {
   return (

@@ -1,0 +1,17 @@
+.header-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 3%;
+}
+
+.upper-title {
+  display: flex;
+  color: #8B003F;
+}
+
+.bottom-title {
+  display: flex;
+  align-self: flex-end;
+  color: #A65400;
+}

@@ -35,3 +35,12 @@ h1 {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+
+h2 {
+  display: flex;
+  font-family: 'Righteous';
+  font-style: normal;
+  font-size: 32px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}

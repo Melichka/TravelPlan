@@ -7,6 +7,7 @@ import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 import { SearchPage } from "./pages/SearchPage";
 
 import "./index.css";
+import { CityPage } from "./pages/CityPage";
 
 function App() {
   const theme = createTheme({});
@@ -18,6 +19,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" Component={SearchPage} />
+              <Route path="/City" Component={CityPage} />
               <Route path="*" element={<h3>404</h3>} />
             </Routes>
           </BrowserRouter>
