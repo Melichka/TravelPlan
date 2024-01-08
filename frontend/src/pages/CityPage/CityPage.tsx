@@ -1,10 +1,13 @@
 import React from "react";
 
+import FavoriteBorderTwoToneIcon from "@mui/icons-material/FavoriteBorderTwoTone";
+
+import { HeaderTitle } from "../../components/HeaderTitle";
+import { SightButton } from "../../components/SightButton";
 import { SignInButton } from "../../components/SignInButton";
 import { SupportButton } from "../../components/SupportButton";
 
 import "./styles.css";
-import { HeaderTitle } from "../../components/HeaderTitle";
 
 export const CityPage = () => {
   return (
@@ -19,10 +22,23 @@ export const CityPage = () => {
         </div>
       </div>
       <div className="city-page-main">
-        <div className="city-page-image"></div>
-        <div className="city-page-discription">
-          <div className="city-page-buttons">
-
+        <div className="city-page-main-card">
+          <div className="city-page-main-card-header">
+            <div className="city-page-main-card-header-name">
+              <h3></h3>
+            </div>
+            <FavoriteBorderTwoToneIcon
+              sx={{
+                color: "white",
+                fontSize: 40,
+              }}
+            />
+          </div>
+          <div className="city-page-main-cadr-image"></div>
+        </div>
+        <div className="city-page-description">
+          <div className="city-page-description-buttons">
+              <SightButton/>
           </div>
         </div>
       </div>
