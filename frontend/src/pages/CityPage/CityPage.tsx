@@ -8,6 +8,7 @@ import { SignInButton } from "../../components/SignInButton";
 import { SupportButton } from "../../components/SupportButton";
 
 import "./styles.css";
+import { HotelButton } from "../../components/HotelButton";
 
 export const CityPage = () => {
   return (
@@ -38,7 +39,8 @@ export const CityPage = () => {
         </div>
         <div className="city-page-description">
           <div className="city-page-description-buttons">
-              <SightButton/>
+            <SightButton />
+            <HotelButton />
           </div>
         </div>
       </div>
