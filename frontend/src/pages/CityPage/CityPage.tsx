@@ -10,7 +10,7 @@ export const CityPage = () => {
   return (
     <div className="city-page">
       <div className="city-page-header">
-        <div>
+        <div className="city-page-title">
           <HeaderTitle />
         </div>
         <div className="city-page-buttons">
@@ -20,7 +20,11 @@ export const CityPage = () => {
       </div>
       <div className="city-page-main">
         <div className="city-page-image"></div>
-        <div className="city-page-discription"></div>
+        <div className="city-page-discription">
+          <div className="city-page-buttons">
+
+          </div>
+        </div>
       </div>
     </div>
   );
