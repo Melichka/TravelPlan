@@ -2,13 +2,14 @@ import React from "react";
 
 import FavoriteBorderTwoToneIcon from "@mui/icons-material/FavoriteBorderTwoTone";
 
+import { EntertainmentButton } from "../../components/EntertainmentButton";
 import { HeaderTitle } from "../../components/HeaderTitle";
+import { HotelButton } from "../../components/HotelButton";
 import { SightButton } from "../../components/SightButton";
 import { SignInButton } from "../../components/SignInButton";
 import { SupportButton } from "../../components/SupportButton";
 
 import "./styles.css";
-import { HotelButton } from "../../components/HotelButton";
 
 export const CityPage = () => {
   return (
@@ -41,6 +42,7 @@ export const CityPage = () => {
           <div className="city-page-description-buttons">
             <SightButton />
             <HotelButton />
+            <EntertainmentButton />
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { Button, Typography } from "@mui/material"
 
 import { HOTEL } from './constants';
 
-import './styles.css';
+import "./styles.css";
 
 export const HotelButton = () => {
     return (
