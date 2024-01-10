@@ -19,13 +19,16 @@ function App() {
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" Component={SearchPage} />
-            <Route path="/city" Component={CityPage} />
-            <Route path="*" element={<h3>404</h3>} />
-          </Routes>
-        </BrowserRouter>
+        <div>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" Component={SearchPage} />
+              <Route path="/City" Component={CityPage} />
+              <Route path="/SignIn" Component={SignInPage} />
+              <Route path="*" element={<h3>404</h3>} />
+            </Routes>
+          </BrowserRouter>
+        </div>
       </ThemeProvider>
     </StyledEngineProvider>
   );

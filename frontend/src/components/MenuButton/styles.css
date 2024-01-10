@@ -1,0 +1,25 @@
+.large {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: #FFBA73;
+}
+
+.large-menu-button-text {
+  font-family: "Roboto";
+  font-size: 32px;
+  color: #a61700;
+}
+
+.default-menu-button-text {
+  font-family: "Roboto";
+  font-size: 32px;
+  color: #a61700;
+}
+
+.default {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: #FFBA73;
+}
