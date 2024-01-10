@@ -1,0 +1,18 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 60%;
+  cursor: pointer;
+}
+
+.upper-title {
+  display: flex;
+  color: #8B003F;
+}
+
+.bottom-title {
+  display: flex;
+  align-self: flex-end;
+  color: #A65400;
+}
