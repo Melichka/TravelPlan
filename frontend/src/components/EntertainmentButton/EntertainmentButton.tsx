@@ -1,17 +1,14 @@
 import React from "react";
 
-import { Button, Typography } from "@mui/material";
-
 import { ENTERTAINMENT } from "./constants";
 
 import "./styles.css";
+import { MenuButton } from "../MenuButton/MenuButton";
 
 export const EntertainmentButton = () => {
   return (
-    <Button className="button-style">
-      <Typography className="text-button-style" variant="h3">
-        {ENTERTAINMENT}
-      </Typography>
-    </Button>
+    <MenuButton text={ENTERTAINMENT}>
+
+    </MenuButton>
   );
 };

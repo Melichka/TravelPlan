@@ -40,9 +40,15 @@ export const CityPage = () => {
         </div>
         <div className="city-page-description">
           <div className="city-page-description-buttons">
-            <SightButton />
-            <HotelButton />
-            <EntertainmentButton />
+            <div className="city-page-description-sight">
+              <SightButton />
+            </div>
+            <div className="city-page-description-hotel">
+              <HotelButton />
+            </div>
+            <div className="city-page-description-entertainment">
+              <EntertainmentButton />
+            </div>
           </div>
         </div>
       </div>

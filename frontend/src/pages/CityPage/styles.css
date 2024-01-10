@@ -38,7 +38,6 @@
   display: flex;
   width: 45%;
   flex-direction: column;
-
 }
 
 .city-page-header {
@@ -77,4 +76,16 @@
   justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
+}
+
+.city-page-description-sight {
+  width: 100%;
+}
+
+.city-page-description-hotel {
+  width: 50%;
+}
+
+.city-page-description-entertainment {
+  width: 50%;
 }

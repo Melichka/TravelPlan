@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { Button, Typography } from "@mui/material"
+import { SIGHT } from "./constants";
 
-import { SIGHT } from './constants';
-
-import './styles.css';
+import "./styles.css";
+import { MenuButton } from "../MenuButton/MenuButton";
 
 export const SightButton = () => {
-    return (
-        <Button
-            className="button-style"
-        >
-            <Typography className="text-button-style" variant='h3'>{SIGHT}</Typography>
-        </Button>
-    )
-}
+  return <MenuButton text={SIGHT} isLarge></MenuButton>;
+};
