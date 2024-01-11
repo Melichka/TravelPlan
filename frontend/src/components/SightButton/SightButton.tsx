@@ -6,5 +6,5 @@ import "./styles.css";
 import { MenuButton } from "../MenuButton/MenuButton";
 
 export const SightButton = () => {
-  return <MenuButton text={SIGHT} isLarge></MenuButton>;
+  return <MenuButton text={SIGHT} isLarge />;
 };

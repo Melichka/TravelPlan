@@ -6,5 +6,5 @@ import { MenuButton } from "../MenuButton/MenuButton";
 import "./styles.css";
 
 export const HotelButton = () => {
-  return <MenuButton text={HOTEL}></MenuButton>;
+  return <MenuButton text={HOTEL} />;
 };
