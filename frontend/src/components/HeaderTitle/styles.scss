@@ -1,0 +1,18 @@
+$upper-color: #8B003F;
+$bottom-color: #A65400;
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 3%;
+
+  .upper-title {
+    color: $upper-color;
+  }
+
+  .bottom-title {
+    align-self: flex-end;
+    color: $bottom-color;
+  }
+}

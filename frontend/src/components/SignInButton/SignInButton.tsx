@@ -8,8 +8,8 @@ import "./styles.css";
 
 export const SignInButton = () => {
   return (
-    <Button className="button-style" variant="outlined">
-      <Typography className="text-button-style" variant="h3">
+    <Button className="button" variant="outlined">
+      <Typography className="text-button" variant="h3">
         {SIGN_IN}
       </Typography>
     </Button>

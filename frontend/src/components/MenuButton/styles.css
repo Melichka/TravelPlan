@@ -1,4 +1,5 @@
-.large {
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap");
+.large, .default {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -6,22 +7,10 @@
   margin: 5px;
 }
 
-.large-menu-button-text {
+.large-menu-button-text, .default-menu-button-text {
   font-family: "Roboto";
   font-size: 32px;
   color: #a61700;
 }
 
-.default-menu-button-text {
-  font-family: "Roboto";
-  font-size: 32px;
-  color: #a61700;
-}
-
-.default {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  background-color: #FFBA73;
-  margin: 5px;
-}
+/*# sourceMappingURL=styles.css.map */

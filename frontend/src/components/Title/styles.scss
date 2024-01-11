@@ -1,3 +1,6 @@
+$upper-color: #8B003F;
+$botton-color: #A65400;
+
 .title, .bottom-title, .upper-title {
   display: flex;
 }
@@ -9,12 +12,10 @@
 }
 
 .upper-title {
-  color: #8B003F;
+  color: $upper-color;
 }
 
 .bottom-title {
   align-self: flex-end;
-  color: #A65400;
+  color: $botton-color;
 }
-
-/*# sourceMappingURL=styles.css.map */

@@ -1,9 +1,13 @@
-.text-button-style {
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap");
+
+.text-button {
   font-family: "Roboto";
   font-size: 24px;
   color: #A61700;
 }
 
-.button-style {
-  border-color: white;
+.button {
+  border-color: #ffffff;
 }
+
+/*# sourceMappingURL=styles.css.map */

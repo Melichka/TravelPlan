@@ -1,0 +1,42 @@
+@import 'basestyle';
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
+
+$primary-color: #FFBA73;
+$font-stack: 'Roboto';
+$font-title: 'Righteous';
+
+body {
+  font-family: $font-stack;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $primary-color;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  display: flex;
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 85px;
+  line-height: 106px;
+}
+
+h2,
+h3 {
+  display: flex;
+  font-family: $font-title;
+  font-style: normal;
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}
