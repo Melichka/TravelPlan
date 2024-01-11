@@ -4,7 +4,7 @@
   height: 100vh;
   justify-content: space-around;
   flex-direction: column;
-  background-image: url('/assets/images/bubbleforsearchpage.svg');
+  background-image: url('./images/background.svg');
   background-repeat: no-repeat;
 }
 
