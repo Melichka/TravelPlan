@@ -3,7 +3,7 @@ import React from "react";
 import { Button, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-import { SearchBarStyles } from "./utils";
+import { SearchBarStyles, SearchIconStyles } from "./utils";
 import { TEXT_INTO_SEARCH_BAR } from "./constants";
 
 import "./styles.css";
@@ -22,9 +22,7 @@ export const SearchBar = () => {
           startAdornment: (
             <Button>
               <SearchIcon
-                sx={{
-                  color: "black",
-                }}
+                sx={SearchIconStyles()}
               />
             </Button>
           ),

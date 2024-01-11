@@ -9,6 +9,8 @@ import { SightButton } from "src/components/SightButton";
 import { SignInButton } from "src/components/SignInButton";
 import { SupportButton } from "src/components/SupportButton";
 
+import { FavoriteBorderTwoToneIconStyles } from "./utils";
+
 import "./styles.css";
 
 export const CityPage = () => {
@@ -29,12 +31,7 @@ export const CityPage = () => {
             <div className="city-page-main-card-header-name">
               <h3></h3>
             </div>
-            <FavoriteBorderTwoToneIcon
-              sx={{
-                color: "white",
-                fontSize: 40,
-              }}
-            />
+            <FavoriteBorderTwoToneIcon sx={FavoriteBorderTwoToneIconStyles()} />
           </div>
           <div className="city-page-main-cadr-image"></div>
         </div>

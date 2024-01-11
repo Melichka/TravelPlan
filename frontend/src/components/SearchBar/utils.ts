@@ -5,3 +5,9 @@ export const SearchBarStyles = () => {
     },
   };
 };
+
+export const SearchIconStyles = () => {
+  return {
+    color: "black",
+  };
+};
