@@ -79,13 +79,16 @@
 }
 
 .city-page-description-sight {
+  display: flex;
   width: 100%;
 }
 
 .city-page-description-hotel {
+  display: flex;
   width: 50%;
 }
 
 .city-page-description-entertainment {
+  display: flex;
   width: 50%;
 }
