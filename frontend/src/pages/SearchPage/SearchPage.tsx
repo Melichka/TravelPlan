@@ -1,10 +1,10 @@
 import React from "react";
 
-import { SearchBar } from "../../components/SearchBar";
-import { SignInButton } from "../../components/SignInButton";
-import { Space } from "../../components/Space";
-import { SupportButton } from "../../components/SupportButton";
-import { Title } from "../../components/Title";
+import { SearchBar } from "src/components/SearchBar";
+import { SignInButton } from "src/components/SignInButton";
+import { Space } from "src/components/Space";
+import { SupportButton } from "src/components/SupportButton";
+import { Title } from "src/components/Title";
 
 import "./styles.css";
 

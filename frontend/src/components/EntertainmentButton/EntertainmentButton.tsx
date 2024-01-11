@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ENTERTAINMENT } from "./constants";
-import { MenuButton } from "../MenuButton/MenuButton";
+import { MenuButton } from "src/components/MenuButton";
 
 import "./styles.css";
 

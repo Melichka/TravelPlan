@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
 import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 
-import { CityPage } from "./pages/CityPage";
-import { SearchPage } from "./pages/SearchPage";
+import { CityPage } from "src/pages/CityPage";
+import { SearchPage } from "src/pages/SearchPage";
 
 import "./index.css";
 

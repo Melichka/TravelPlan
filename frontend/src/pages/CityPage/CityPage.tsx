@@ -2,12 +2,12 @@ import React from "react";
 
 import FavoriteBorderTwoToneIcon from "@mui/icons-material/FavoriteBorderTwoTone";
 
-import { EntertainmentButton } from "../../components/EntertainmentButton";
-import { HeaderTitle } from "../../components/HeaderTitle";
-import { HotelButton } from "../../components/HotelButton";
-import { SightButton } from "../../components/SightButton";
-import { SignInButton } from "../../components/SignInButton";
-import { SupportButton } from "../../components/SupportButton";
+import { EntertainmentButton } from "src/components/EntertainmentButton";
+import { HeaderTitle } from "src/components/HeaderTitle";
+import { HotelButton } from "src/components/HotelButton";
+import { SightButton } from "src/components/SightButton";
+import { SignInButton } from "src/components/SignInButton";
+import { SupportButton } from "src/components/SupportButton";
 
 import "./styles.css";
 

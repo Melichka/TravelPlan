@@ -18,11 +18,7 @@ export const SearchBar = () => {
         fullWidth
         sx={{
           "& .MuiOutlinedInput-root": {
-            borderRadius: 50, // Установка радиуса в 50
-            borderColor: "#A61700", // Установка цвета рамки
-          },
-          "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#A61700", // Также установка цвета рамки для активного состояния
+            borderRadius: 50,
           },
         }}
         InputProps={{
