@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Button, TextField, Typography } from "@mui/material"
-import SearchIcon from '@mui/icons-material/Search';
-
+import { SearchBar } from "../../components/SearchBar";
 import { SignInButton } from "../../components/SignInButton";
-
-import { SUPPORT } from "./constants";
+import { Space } from "../../components/Space";
+import { SupportButton } from "../../components/SupportButton";
+import { Title } from "../../components/Title";
 
 import "./SearchPage.css";
 
@@ -14,41 +13,16 @@ export function SearchPage() {
     <div className="search-page">
       <div className="search-page-buttons">
         <SignInButton />
-
-        <Button className="button-style">
-          <Typography className="text-button-style">{SUPPORT}</Typography>
-        </Button>
+        <SupportButton />
       </div>
-
       <div className="search-page-main">
         <div className="search-page-assets">
-          <div className="search-page-image"></div>
-          <div className="title">
-            <h1 className="upper-title"> Oompa </h1>
-            <h1 className="bottom-title">Loompas</h1>
-          </div>
+          <div className="search-page-image" />
+          <Title />
         </div>
-        <div className="search-bar">
-          <TextField
-            id="input-text-field"
-            placeholder="Введите страну, город или место..."
-            className="text-field"
-            variant="outlined"
-            type="text"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <Button>
-                  <SearchIcon />
-                </Button>
-              ),
-            }}
-          />
-        </div>
+        <SearchBar />
       </div>
-
-      <div className="space"></div>
+      <Space />
     </div>
   );
 }
-

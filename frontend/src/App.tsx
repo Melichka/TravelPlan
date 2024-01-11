@@ -1,17 +1,15 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import StyledEngineProvider from '@mui/material/StyledEngineProvider';
-import { ThemeProvider, createTheme } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
+import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 
 import { SearchPage } from "./pages/SearchPage";
 
-import "./index.css"
+import "./index.css";
 
 function App() {
-  const theme = createTheme({
-
-  });
+  const theme = createTheme({});
 
   return (
     <StyledEngineProvider injectFirst>
@@ -26,8 +24,7 @@ function App() {
         </div>
       </ThemeProvider>
     </StyledEngineProvider>
-  )
-};
-
+  );
+}
 
 export default App;
