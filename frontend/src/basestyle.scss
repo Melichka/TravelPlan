@@ -1,9 +1,14 @@
-html,body {
-  margin:  0;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
+
+html,
+body {
+  margin: 0;
   padding: 0;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   margin-block-start: 0;
   margin-block-end: 0;
 }
