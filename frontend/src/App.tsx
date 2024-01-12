@@ -4,10 +4,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
 import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 
-import { CityPage } from "src/pages/CityPage";
-import { SearchPage } from "src/pages/SearchPage";
+import { CityPage } from "src/pages/citypage";
+import { SearchPage } from "src/pages/searchpage";
 
 import "./index.css";
+
+import "./i18n";
 
 function App() {
   const theme = createTheme({});
