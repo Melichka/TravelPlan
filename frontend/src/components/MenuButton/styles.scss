@@ -1,19 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
-
-$font-stack: 'Roboto';
-$text-color: #a61700;
-$button-color: #FFBA73;
+@use "../styles/variables/color.scss";
+@use "../styles/variables/font.scss";
 
 .large, .default {
  display: flex;
   width: 100%;
   justify-content: center;
-  background-color: $button-color;
+  background-color: color.$default-button-color;
   margin: 5px;
 }
 
 .large-menu-button-text, .default-menu-button-text {
-  font-family: $font-stack;
+  font-family: font.$font-stack;
   font-size: 32px;
-  color: $text-color;
+  color: color.$text-color;
 }

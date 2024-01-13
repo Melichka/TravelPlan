@@ -1,5 +1,4 @@
-$upper-color: #8B003F;
-$bottom-color: #A65400;
+@import "src/components/styles/variables/color";
 
 .header-title {
   display: flex;
@@ -8,11 +7,11 @@ $bottom-color: #A65400;
   margin-right: 3%;
 
   .upper-title {
-    color: $upper-color;
+    color: $upper-title-color;
   }
 
   .bottom-title {
     align-self: flex-end;
-    color: $bottom-color;
+    color: $bottom-title-color;
   }
 }
