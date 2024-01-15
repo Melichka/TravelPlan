@@ -6,7 +6,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { SearchBarStyles, SearchIconStyles } from "./utils";
 import { TEXT_INTO_SEARCH_BAR } from "./constants";
 
-import "./styles.css";
+import "./styles.scss";
 
 export const SearchBar = () => {
   return (

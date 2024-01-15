@@ -6,7 +6,7 @@ import { useTranslation, Trans } from 'react-i18next';
 
 import classNames from "classnames";
 
-import "./styles.css";
+import "./styles.scss";
 
 type MenuButtonProps = {
   text: string;

@@ -7,7 +7,9 @@ import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 import { CityPage } from "src/pages/city";
 import { SearchPage } from "src/pages/search";
 
-import "./index.css";
+import { useTranslation, Trans } from 'react-i18next';
+
+import "./index.scss";
 
 import "./i18n";
 

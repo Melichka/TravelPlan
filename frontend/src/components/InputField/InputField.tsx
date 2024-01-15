@@ -5,7 +5,7 @@ import LockIcon from "@mui/icons-material/Lock";
 
 import { InputAdornment, TextField } from "@mui/material";
 
-import "./styles.css";
+import "./styles.scss";
 
 type InputFieldProps = {
   placeholder: string;

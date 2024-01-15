@@ -4,7 +4,7 @@ import { Button, Typography } from "@mui/material";
 
 import { SIGN_IN } from "./constants";
 
-import "./styles.css";
+import "./styles.scss";
 
 export const SignInButton = () => {
   return (
