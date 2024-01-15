@@ -1,15 +1,17 @@
 @import "src/components/styles/variables/color";
 @import "src/components/styles/variables/font";
 
-.large, .default {
- display: flex;
+.large,
+.default {
+  display: flex;
   width: 100%;
   justify-content: center;
   background-color: $default-button-color;
   margin: 5px;
 }
 
-.largeMenuButtonText, .default-menu-button-text {
+.largeMenuButtonText,
+.default-menu-button-text {
   font-family: $font-stack;
   font-size: $big-font-size;
   color: $text-color;

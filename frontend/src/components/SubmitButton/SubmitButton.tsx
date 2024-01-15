@@ -4,11 +4,11 @@ import { Button, Typography } from "@mui/material";
 
 import { SUBMIT } from "./constants";
 
-import "./styles.scss";
+import styles from "./styles.module.scss";
 
 export const SubmitButton = () => {
   return (
-    <div className="submit-button">
+    <div className={styles.submit}>
       <Button>
         <Typography>{SUBMIT}</Typography>
       </Button>
