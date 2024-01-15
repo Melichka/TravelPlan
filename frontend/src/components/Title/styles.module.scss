@@ -1,0 +1,20 @@
+@import "src/components/styles/variables/color";
+
+.title, .bottom, .upper {
+  display: flex;
+}
+
+.title {
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 60%;
+}
+
+.upper {
+  color: $upper-title-color;
+}
+
+.bottom {
+  align-self: flex-end;
+  color: $bottom-title-color;
+}

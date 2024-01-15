@@ -4,12 +4,12 @@ import { Button, Typography } from "@mui/material";
 
 import { SIGN_IN } from "./constants";
 
-import "./styles.scss";
+import styles from "./styles.module.scss";
 
 export const SignInButton = () => {
   return (
-    <Button className="button" variant="outlined">
-      <Typography className="text-button" variant="h3">
+    <Button className={styles.button} variant="outlined">
+      <Typography className={styles['text-button']} variant="h3">
         {SIGN_IN}
       </Typography>
     </Button>

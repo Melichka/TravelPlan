@@ -6,7 +6,7 @@ import { useTranslation, Trans } from 'react-i18next';
 
 import classNames from "classnames";
 
-import "./styles.scss";
+import styles from  "./styles.module.scss";
 
 type MenuButtonProps = {
   text: string;
@@ -23,8 +23,8 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ text, isLarge }) => {
     >
       <Typography
         className={classNames({
-          "default-menu-button-text": !isLarge,
-          "large-menu-button-text": isLarge,
+          [styles["default-menu-button-text"]]: !isLarge,
+          [styles["large-menu-button-text"]]: isLarge,
         })}
         variant="h3"
       >

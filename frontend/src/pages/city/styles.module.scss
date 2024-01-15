@@ -1,4 +1,4 @@
-@import '../../components/styles/variables/color';
+@import "src/components/styles/variables/color";
 
 .city-page {
   display: flex;
@@ -8,7 +8,7 @@
   flex-direction: column;
   background-image: url('./images/background.svg');
   background-repeat: no-repeat;
-  background-color: color.$pages-bg-color;
+  background-color: $pages-bg-color;
   background-size: 100%;
 }
 
@@ -30,7 +30,7 @@
 .city-page-main-card {
   display: flex;
   width: 45%;
-  background-color: color.$pages-bg-color;
+  background-color: $pages-bg-color;
   border-radius: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   flex-direction: column;

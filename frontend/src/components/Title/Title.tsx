@@ -2,13 +2,13 @@ import React from "react";
 
 import { BOTTOM_TITLE, UPPER_TITLE } from "./constants";
 
-import "./styles.scss";
+import styles from "./styles.module.scss";
 
 export const Title = () => {
   return (
-    <div className="title">
-      <h1 className="upper-title"> {UPPER_TITLE} </h1>
-      <h1 className="bottom-title"> {BOTTOM_TITLE} </h1>
+    <div className={styles.title}>
+      <h1 className={styles.upper}> {UPPER_TITLE} </h1>
+      <h1 className={styles.bottom}> {BOTTOM_TITLE} </h1>
     </div>
   );
 };

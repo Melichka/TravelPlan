@@ -14,43 +14,43 @@ import { FavoriteBorderTwoToneIconStyles } from "src/pages/city/utils";
 
 import { Trans } from 'react-i18next';
 
-import "./styles.css";
+import styles from "./styles.module.scss";
 
 
 export const CityPage = () => {
 
   return (
-    <div className="city-page">
-      <div className="city-page-header">
-        <div className="city-page-title">
+    <div className={styles['city-page']}>
+      <div className={styles['city-page-header']}>
+        <div className={styles['city-page-title']}>
           <HeaderTitle />
         </div>
-        <div className="city-page-buttons">
+        <div className={styles['city-page-buttons']}>
           <SwitchLanguage />
           <SignInButton />
           <SupportButton />
         </div>
       </div>
-      <div className="city-page-main">
+      <div className={styles['city-page-main']}>
 
-        <div className="city-page-main-card">
-          <div className="city-page-main-card-header">
-            <div className="city-page-main-card-header-name">
+        <div className={styles['city-page-main-card']}>
+          <div className={styles['city-page-main-card-header']}>
+            <div className={styles['city-page-main-card-header-name']}>
               <h3></h3>
             </div>
             <FavoriteBorderTwoToneIcon sx={FavoriteBorderTwoToneIconStyles()} />
           </div>
-          <div className="city-page-main-card-image"></div>
+          <div className={styles['city-page-main-card-image']}></div>
         </div>
-        <div className="city-page-description">
-          <div className="city-page-description-buttons">
-            <div className="city-page-description-sight">
+        <div className={styles['city-page-description']}>
+          <div className={styles['city-page-description-buttons']}>
+            <div className={styles['city-page-description-sight']}>
               <SightButton />
             </div>
-            <div className="city-page-description-hotel">
+            <div className={styles['city-page-description-hotel']}>
               <HotelButton />
             </div>
-            <div className="city-page-description-entertainment">
+            <div className={styles['city-page-description-entertainment']}>
               <EntertainmentButton />
             </div>
           </div>
