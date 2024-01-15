@@ -1,16 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap");
-.large, .default {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  background-color: #FFBA73;
-  margin: 5px;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use \"scr/components/styles/variables/color.scss\";\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   styles.scss 1:1  root stylesheet";
 }
-
-.large-menu-button-text, .default-menu-button-text {
-  font-family: "Roboto";
-  font-size: 32px;
-  color: #a61700;
-}
-
-/*# sourceMappingURL=styles.css.map */

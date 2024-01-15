@@ -2,6 +2,8 @@ import React from "react";
 
 import { Button, Typography } from "@mui/material";
 
+import { useTranslation, Trans } from 'react-i18next';
+
 import classNames from "classnames";
 
 import "./styles.css";
@@ -26,7 +28,8 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ text, isLarge }) => {
         })}
         variant="h3"
       >
-        {text}
+        {" "}
+        <Trans i18nKey="description.part1">{text}</Trans>
       </Typography>
     </Button>
   );

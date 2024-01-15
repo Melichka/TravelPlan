@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
-
-$font-stack: 'Roboto';
-$text-color: #A61700;
-$border-color: #ffffff;
-
+@use "../styles/variables/color.scss";
+@use "../styles/variables/font.scss";
 
 .text-button {
-  font-family: $font-stack;
+  font-family: font.$font-stack;
   font-size: 24px;
-  color: $text-color;
+  color: color.$text-color;
 }
 
 .button {
-  border-color: $border-color;
+  border-color: color.$white-border;
 }

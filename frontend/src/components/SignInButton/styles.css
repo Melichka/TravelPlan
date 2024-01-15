@@ -1,13 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap");
-
 .text-button {
   font-family: "Roboto";
   font-size: 24px;
-  color: #A61700;
+  color: #a61700;
 }
 
 .button {
-  border-color: #ffffff;
+  border-color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */
