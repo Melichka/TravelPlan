@@ -17,8 +17,8 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ text, isLarge }) => {
   return (
     <Button
       className={classNames({
-        large: isLarge,
-        default: !isLarge,
+        [styles['large']]: isLarge,
+        [styles['default']]: !isLarge,
       })}
     >
       <Typography
