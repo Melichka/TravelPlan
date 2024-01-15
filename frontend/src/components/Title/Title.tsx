@@ -2,7 +2,7 @@ import React from "react";
 
 import { BOTTOM_TITLE, UPPER_TITLE } from "./constants";
 
-import "./styles.css";
+import "./styles.scss";
 
 export const Title = () => {
   return (

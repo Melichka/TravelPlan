@@ -9,7 +9,7 @@ import { SearchPage } from "src/pages/search";
 
 import { useTranslation, Trans } from 'react-i18next';
 
-import "./index.css";
+import "./index.scss";
 
 import "./i18n";
 

@@ -4,7 +4,7 @@ import { Button, Typography } from "@mui/material";
 
 import classNames from "classnames";
 
-import "./styles.css";
+import "./styles.scss";
 
 type MenuButtonProps = {
   text: string;
