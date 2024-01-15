@@ -1,12 +1,14 @@
+@import '../../components/styles/variables/color';
+
 .city-page {
   display: flex;
   width: 100%;
   height: 100dvh;
   justify-content: space-around;
   flex-direction: column;
-  background-image: url("./images/background.svg");
+  background-image: url('./images/background.svg');
   background-repeat: no-repeat;
-  background-color: #FFBA73;
+  background-color: color.$pages-bg-color;
   background-size: 100%;
 }
 
@@ -28,7 +30,7 @@
 .city-page-main-card {
   display: flex;
   width: 45%;
-  background-color: #FFBA73;
+  background-color: color.$pages-bg-color;
   border-radius: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   flex-direction: column;
@@ -66,7 +68,7 @@
   width: 80%;
 }
 
-.city-page-main-card-image {
+.city-page-main-cadr-image {
   display: flex;
   width: 100%;
 }
@@ -88,5 +90,3 @@
   display: flex;
   width: 50%;
 }
-
-/*# sourceMappingURL=styles.css.map */

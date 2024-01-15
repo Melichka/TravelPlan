@@ -9,7 +9,7 @@ import { SightButton } from "src/components/SightButton";
 import { SignInButton } from "src/components/SignInButton";
 import { SupportButton } from "src/components/SupportButton";
 
-import { FavoriteBorderTwoToneIconStyles } from "src/pages/citypage/utils";
+import { FavoriteBorderTwoToneIconStyles } from "src/pages/city/utils";
 
 import "./styles.css";
 
