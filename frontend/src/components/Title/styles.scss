@@ -1,5 +1,4 @@
-$upper-color: #8B003F;
-$botton-color: #A65400;
+@use "../styles/variables/color.scss";
 
 .title, .bottom-title, .upper-title {
   display: flex;
@@ -12,10 +11,10 @@ $botton-color: #A65400;
 }
 
 .upper-title {
-  color: $upper-color;
+  color: color.$upper-title-color;
 }
 
 .bottom-title {
   align-self: flex-end;
-  color: $botton-color;
+  color: color.$botton-title-color;
 }

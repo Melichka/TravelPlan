@@ -7,15 +7,12 @@ import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 import { CityPage } from "src/pages/city";
 import { SearchPage } from "src/pages/search";
 
-import { useTranslation, Trans } from 'react-i18next';
-
 import "./index.css";
 
 import "./i18n";
 
 function App() {
   const theme = createTheme({});
-  const { t } = useTranslation();
 
   return (
     <StyledEngineProvider injectFirst>

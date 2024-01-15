@@ -7,13 +7,18 @@ import { HeaderTitle } from "src/components/HeaderTitle";
 import { HotelButton } from "src/components/HotelButton";
 import { SightButton } from "src/components/SightButton";
 import { SignInButton } from "src/components/SignInButton";
+import { SwitchLanguage } from "src/components/SwitchLanguage";
 import { SupportButton } from "src/components/SupportButton";
 
 import { FavoriteBorderTwoToneIconStyles } from "src/pages/city/utils";
 
+import { Trans } from 'react-i18next';
+
 import "./styles.css";
 
+
 export const CityPage = () => {
+
   return (
     <div className="city-page">
       <div className="city-page-header">
@@ -21,11 +26,13 @@ export const CityPage = () => {
           <HeaderTitle />
         </div>
         <div className="city-page-buttons">
+          <SwitchLanguage />
           <SignInButton />
           <SupportButton />
         </div>
       </div>
       <div className="city-page-main">
+
         <div className="city-page-main-card">
           <div className="city-page-main-card-header">
             <div className="city-page-main-card-header-name">

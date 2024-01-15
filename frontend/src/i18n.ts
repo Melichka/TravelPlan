@@ -20,9 +20,19 @@ i18n
     resources: {
       en: {
         translation: {
-          // here we will place our translations...
+          description:{
+            part1:'bibibi',
+            part2:'',
+          }
         },
       },
+      ru: {
+        translation: {
+          description: {
+            part1:'хаха',
+          }
+        }
+      }
     },
   });
 
