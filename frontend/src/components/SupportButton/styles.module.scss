@@ -1,12 +1,8 @@
 @import "src/components/styles/variables/color";
 @import "src/components/styles/variables/font";
 
-.text-button {
+.textButtonStyle {
   font-family: $font-stack;
   font-size: $medium-font-size;
   color: $text-color;
-}
-
-.button {
-  border-color: $white-border;
 }

@@ -1,4 +1,4 @@
-.search-page {
+.searchPage {
   display: flex;
   width: 100%;
   height: 100dvh;
@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
 }
 
-.search-page-assets {
+.assets {
   display: flex;
   flex-direction: row;
   width: 50%;
@@ -17,13 +17,13 @@
   flex-wrap: wrap;
 }
 
-.search-page-buttons {
+.buttons {
   display: flex;
   justify-content: flex-end;
   margin-right: 3%;
 }
 
-.search-page-image {
+.image {
   display: flex;
   width: 40%;
   height: 40dvh;
@@ -32,7 +32,7 @@
   background-size: contain;
 }
 
-.search-page-main {
+.main {
   display: flex;
   justify-content: space-between;
   flex-direction: column;

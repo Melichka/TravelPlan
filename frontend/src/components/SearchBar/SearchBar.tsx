@@ -6,14 +6,14 @@ import SearchIcon from "@mui/icons-material/Search";
 import { SearchBarStyles, SearchIconStyles } from "./utils";
 import { TEXT_INTO_SEARCH_BAR } from "./constants";
 
-import "./styles.scss";
+import styles from "./styles.module.scss";
 
 export const SearchBar = () => {
   return (
-    <div className="search-bar">
+    <div className={styles.searchBar}>
       <TextField
         placeholder={TEXT_INTO_SEARCH_BAR}
-        className="text-field"
+        className={styles.textField}
         variant="outlined"
         type="text"
         fullWidth

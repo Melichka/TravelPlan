@@ -4,12 +4,12 @@ import { Button, Typography } from "@mui/material";
 
 import { SUPPORT } from "./constants";
 
-import "./styles.scss";
+import styles from "./styles.module.scss";
 
 export const SupportButton = () => {
   return (
     <Button>
-      <Typography className="text-button-style">{SUPPORT}</Typography>
+      <Typography className={styles.textButtonStyle}>{SUPPORT}</Typography>
     </Button>
   );
 };
