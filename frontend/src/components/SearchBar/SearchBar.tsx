@@ -3,35 +3,26 @@ import React from "react";
 import { Button, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
+import { SearchBarStyles, SearchIconStyles } from "./utils";
 import { TEXT_INTO_SEARCH_BAR } from "./constants";
 
-import "./styles.css";
+import styles from "./styles.module.scss";
 
 export const SearchBar = () => {
   return (
-    <div className="search-bar">
+    <div className={styles.searchBar}>
       <TextField
         placeholder={TEXT_INTO_SEARCH_BAR}
-        className="text-field"
+        className={styles.textField}
         variant="outlined"
         type="text"
         fullWidth
-        sx={{
-          "& .MuiOutlinedInput-root": {
-            borderRadius: 50, // Установка радиуса в 50
-            borderColor: "#A61700", // Установка цвета рамки
-          },
-          "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#A61700", // Также установка цвета рамки для активного состояния
-          },
-        }}
+        sx={SearchBarStyles()}
         InputProps={{
           startAdornment: (
             <Button>
               <SearchIcon
-                sx={{
-                  color: "black",
-                }}
+                sx={SearchIconStyles()}
               />
             </Button>
           ),

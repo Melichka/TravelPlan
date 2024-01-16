@@ -1,14 +1,14 @@
-.search-page {
+.searchPage {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   justify-content: space-around;
   flex-direction: column;
-  background-image: url('/assets/images/bubble.svg');
+  background-image: url('./images/background.svg');
   background-repeat: no-repeat;
 }
 
-.search-page-assets {
+.assets {
   display: flex;
   flex-direction: row;
   width: 50%;
@@ -17,22 +17,22 @@
   flex-wrap: wrap;
 }
 
-.search-page-buttons {
+.buttons {
   display: flex;
   justify-content: flex-end;
   margin-right: 3%;
 }
 
-.search-page-image {
+.image {
   display: flex;
   width: 40%;
-  height: 40vh;
+  height: 40dvh;
   background-image: url('/assets/images/limon.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.search-page-main {
+.main {
   display: flex;
   justify-content: space-between;
   flex-direction: column;

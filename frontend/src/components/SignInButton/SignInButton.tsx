@@ -1,18 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import { Button, Typography } from "@mui/material"
+import { Button, Typography } from "@mui/material";
 
-import { SIGN_IN } from './constants';
+import { SIGN_IN } from "./constants";
 
-import './styles.css';
+import styles from "./styles.module.scss";
 
 export const SignInButton = () => {
-    return (
-        <Button
-            className="button-style"
-            variant="outlined"
-        >
-            <Typography className="text-button-style">{SIGN_IN}</Typography>
-        </Button>
-    )
-}
+  return (
+    <Button className={styles.button} variant="outlined">
+      <Typography className={styles['text-button']} variant="h3">
+        {SIGN_IN}
+      </Typography>
+    </Button>
+  );
+};

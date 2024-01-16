@@ -1,0 +1,8 @@
+@import "src/components/styles/variables/color";
+@import "src/components/styles/variables/property";
+
+.field {
+  background-color: $pages-bg-color;
+  border-radius: $big-border-radius;
+  width: 90%;
+}
