@@ -6,6 +6,7 @@ import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 
 import { CityPage } from "src/pages/city";
 import { SearchPage } from "src/pages/search";
+import { SignInPage } from "src/pages/signIn";
 
 import { useTranslation, Trans } from 'react-i18next';
 
@@ -23,8 +24,8 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" Component={SearchPage} />
-              <Route path="/City" Component={CityPage} />
-              <Route path="/SignIn" Component={SignInPage} />
+              <Route path="/city" Component={CityPage} />
+              <Route path="/signIn" Component={SignInPage} />
               <Route path="*" element={<h3>404</h3>} />
             </Routes>
           </BrowserRouter>
