@@ -3,8 +3,11 @@ import React from "react";
 import { HeaderTitle } from "src/components/HeaderTitle";
 import { LogIn } from "src/components/LogIn";
 
-import styles from "./styles.module.scss";
 import { Password, SubmitButton } from "../../components";
+
+import styles from "./styles.module.scss";
+import { Typography } from "@mui/material";
+import { VARIANTS } from "./constants";
 
 export function SignInPage() {
   return (
@@ -21,6 +24,10 @@ export function SignInPage() {
           <Password />
         </div>
         <SubmitButton />
+        <Typography className={styles.text}>{VARIANTS}</Typography>
+        <div className={styles.altenative}>
+
+        </div>
       </div>
     </div>
   );
