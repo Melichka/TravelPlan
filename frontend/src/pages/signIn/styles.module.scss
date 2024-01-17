@@ -1,0 +1,47 @@
+@import "src/components/styles/variables/color";
+
+.signinPage {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url('./images/backgraund.svg');
+  background-repeat: no-repeat;
+  background-color: $pages-bg-color;
+  background-size: 100%;
+}
+
+.image {
+  display: flex;
+  background-image: url('/assets/images/beeshka.svg');
+  width: 35%;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.title {
+  display: flex;
+  width: 40%;
+  margin-left: 20%;
+}
+
+.main {
+  display: flex;
+  width: 50%;
+  height: 70vh;
+  justify-content: center;
+  align-self: center;
+  background-color: #FF8673;
+  border-radius: 50px;
+  flex-direction: column;
+}
+
+.switcher {
+  display: flex;
+  width: 90%;
+  height: 10vh;
+  background-color: $pages-bg-color;
+  border-radius: 50px;
+  margin-top: 2%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
