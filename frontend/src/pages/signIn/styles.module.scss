@@ -1,4 +1,5 @@
 @import "src/components/styles/variables/color";
+@import "src/components/styles/variables/property";
 
 .signinPage {
   display: flex;
@@ -31,9 +32,10 @@
   height: 70vh;
   justify-content: center;
   align-self: center;
-  background-color: #FF8673;
-  border-radius: 50px;
+  background-color: $modal-bg;
+  border-radius: $big-border-radius;
   flex-direction: column;
+  box-shadow: $shadow;
 }
 
 .switcher {
@@ -41,7 +43,7 @@
   width: 90%;
   height: 10vh;
   background-color: $pages-bg-color;
-  border-radius: 50px;
+  border-radius: $big-border-radius;
   margin-top: 2%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: $shadow;
 }
