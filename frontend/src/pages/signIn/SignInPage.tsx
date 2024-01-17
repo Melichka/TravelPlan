@@ -3,7 +3,7 @@ import React from "react";
 import { HeaderTitle } from "src/components/HeaderTitle";
 import { LogIn } from "src/components/LogIn";
 
-import { Password, SubmitButton } from "../../components";
+import { Password, SignInButton, SubmitButton } from "../../components";
 
 import styles from "./styles.module.scss";
 import { Typography } from "@mui/material";
@@ -18,7 +18,9 @@ export function SignInPage() {
         </div>
       </div>
       <div className={styles.main}>
-        <div className={styles.switcher}></div>
+        <div className={styles.switcher}>
+          <SignInButton />
+        </div>
         <div className={styles.field}>
           <LogIn />
           <Password />
@@ -26,7 +28,9 @@ export function SignInPage() {
         <SubmitButton />
         <Typography className={styles.text}>{VARIANTS}</Typography>
         <div className={styles.altenative}>
-
+          <img src="./images/instagram.svg" alt="instagram" />
+          <img src="./images/vk.svg" alt="vk" />
+          <img src="./images/google.svg" alt="google" />
         </div>
       </div>
     </div>

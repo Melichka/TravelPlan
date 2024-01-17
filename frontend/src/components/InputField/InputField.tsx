@@ -27,6 +27,7 @@ export const InputField: React.FC<InputFieldProps> = ({
       type="text"
       sx={InputFieldStyles()}
       fullWidth
+      variant="outlined"
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">

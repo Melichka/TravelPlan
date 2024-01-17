@@ -1,8 +1,7 @@
 export const InputFieldStyles = () => {
   return {
-    "& .MuiOutlinedInput-root": {
-      borderRadius: 30,
-    },
+    borderRadius: 100,
+
   };
 };
 
