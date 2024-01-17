@@ -5,49 +5,33 @@ import LockIcon from "@mui/icons-material/Lock";
 
 import { InputAdornment, TextField } from "@mui/material";
 
-import "./styles.scss";
+import { IconStyles, InputFieldStyles } from "./utils";
+
+import styles from "./styles.module.scss";
 
 type InputFieldProps = {
   placeholder: string;
-  InputProps?: object;
   isLogin?: boolean;
   isPassword?: boolean;
 };
 
 export const InputField: React.FC<InputFieldProps> = ({
   placeholder,
-  InputProps,
   isLogin,
   isPassword,
 }) => {
   return (
     <TextField
       placeholder={placeholder}
-      className="field"
+      className={styles.field}
       type="text"
+      sx={InputFieldStyles()}
       fullWidth
-      sx={{
-        "& .MuiOutlinedInput-root": {
-          borderRadius: 50,
-        },
-      }}
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
-            {isLogin && (
-              <AccountCircleIcon
-                sx={{
-                  color: "white",
-                }}
-              />
-            )}
-            {isPassword && (
-              <LockIcon
-                sx={{
-                  color: "white",
-                }}
-              />
-            )}
+            {isLogin && <AccountCircleIcon sx={IconStyles()} />}
+            {isPassword && <LockIcon sx={IconStyles()} />}
           </InputAdornment>
         ),
       }}

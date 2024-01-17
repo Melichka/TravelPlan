@@ -2,7 +2,8 @@
 @import "src/components/styles/variables/property";
 
 .field {
+  display: flex;
   background-color: $pages-bg-color;
-  border-radius: $big-border-radius;
+  border-radius: $small-border-radius;
   width: 90%;
 }

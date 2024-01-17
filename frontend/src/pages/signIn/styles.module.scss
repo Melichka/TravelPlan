@@ -31,9 +31,10 @@
   width: 50%;
   height: 70vh;
   justify-content: center;
+  align-items: center;
   align-self: center;
   background-color: $modal-bg;
-  border-radius: $big-border-radius;
+  border-radius: $small-border-radius;
   flex-direction: column;
   box-shadow: $shadow;
 }
@@ -43,7 +44,16 @@
   width: 90%;
   height: 10vh;
   background-color: $pages-bg-color;
-  border-radius: $big-border-radius;
+  border-radius: $small-border-radius;
   margin-top: 2%;
   box-shadow: $shadow;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
 }

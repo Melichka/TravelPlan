@@ -4,6 +4,7 @@ import { HeaderTitle } from "src/components/HeaderTitle";
 import { LogIn } from "src/components/LogIn";
 
 import styles from "./styles.module.scss";
+import { Password } from "../../components";
 
 export function SignInPage() {
   return (
@@ -15,8 +16,9 @@ export function SignInPage() {
       </div>
       <div className={styles.main}>
         <div className={styles.switcher}></div>
-        <div className="">
+        <div className={styles.field}>
           <LogIn />
+          <Password />
         </div>
       </div>
     </div>
