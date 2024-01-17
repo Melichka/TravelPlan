@@ -8,7 +8,7 @@ import { CityPage } from "src/pages/city";
 import { SearchPage } from "src/pages/search";
 import { SignInPage } from "src/pages/signIn";
 
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation, Trans } from "react-i18next";
 
 import "./index.scss";
 
@@ -20,16 +20,14 @@ function App() {
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <div>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" Component={SearchPage} />
-              <Route path="/city" Component={CityPage} />
-              <Route path="/signIn" Component={SignInPage} />
-              <Route path="*" element={<h3>404</h3>} />
-            </Routes>
-          </BrowserRouter>
-        </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" Component={SearchPage} />
+            <Route path="/city" Component={CityPage} />
+            <Route path="/signIn" Component={SignInPage} />
+            <Route path="*" element={<h3>404</h3>} />
+          </Routes>
+        </BrowserRouter>
       </ThemeProvider>
     </StyledEngineProvider>
   );
