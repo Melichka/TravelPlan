@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 
 export function SignInPage() {
   return (
-    <div className={styles.SignInPage}>
+    <div className={styles.signinPage}>
       <div className={styles.image}>
         <div className={styles.title}>
           <HeaderTitle />
