@@ -1,11 +1,18 @@
 @import "src/components/styles/variables/color";
+@import "src/components/styles/variables/font";
 @import "src/components/styles/variables/property";
 
 .submit {
   display: flex;
-  background-color: $pages-bg-color;
-  border-radius: $small-border-radius;
-  width: 100%;
+  background-color: $activ-button;
+  border-radius: $mini-border-radius;
+  width: 30%;
   justify-content: center;
+  box-shadow: $shadow;
+}
 
+.text {
+  font-family: $font-stack;
+  font-size: $medium-font-size;
+  color: $text-color;
 }

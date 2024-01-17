@@ -4,7 +4,7 @@ import { HeaderTitle } from "src/components/HeaderTitle";
 import { LogIn } from "src/components/LogIn";
 
 import styles from "./styles.module.scss";
-import { Password } from "../../components";
+import { Password, SubmitButton } from "../../components";
 
 export function SignInPage() {
   return (
@@ -20,6 +20,7 @@ export function SignInPage() {
           <LogIn />
           <Password />
         </div>
+        <SubmitButton />
       </div>
     </div>
   );

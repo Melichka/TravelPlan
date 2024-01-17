@@ -10,7 +10,7 @@ export const SubmitButton = () => {
   return (
     <div className={styles.submit}>
       <Button>
-        <Typography>{SUBMIT}</Typography>
+        <Typography className={styles.text}>{SUBMIT}</Typography>
       </Button>
     </div>
   );
