@@ -1,22 +1,21 @@
 import React from "react";
 
-import "./styles.css";
-import { HeaderTitle } from "../../components/HeaderTitle";
-import { LogIn } from "../../components/LogIn";
+import { HeaderTitle } from "src/components/HeaderTitle";
+import { LogIn } from "src/components/LogIn";
+
+import styles from "./styles.module.scss";
 
 export function SignInPage() {
   return (
-    <div className="signin-page">
-      <div className="signin-page-image">
-        <div className="signin-page-image-title">
-        <HeaderTitle />
+    <div className={styles.SignInPage}>
+      <div className={styles.image}>
+        <div className={styles.title}>
+          <HeaderTitle />
         </div>
       </div>
-      <div className="signin-page-main">
-        <div className="signin-page-main-switcher">
-
-        </div>
-        <div className="signin-page-main-textfield">
+      <div className={styles.main}>
+        <div className={styles.switcher}></div>
+        <div className="">
           <LogIn />
         </div>
       </div>
