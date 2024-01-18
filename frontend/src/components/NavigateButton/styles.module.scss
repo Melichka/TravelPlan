@@ -1,9 +1,20 @@
 @import "src/components/styles/variables/color";
 @import "src/components/styles/variables/font";
+@import "src/components/styles/variables/property";
 
+.activSwitcher {
+  display: flex;
+  width: 50%;
+  background-color: $activ-button;
+  border-radius: $small-border-radius;
+  border: 0;
+  box-shadow: $shadow;
+}
 .switcher {
   display: flex;
-  background-color: $activ-button;
+  width: 50%;
+  border-radius: $small-border-radius;
+  border: 0;
 }
 
 .default {
