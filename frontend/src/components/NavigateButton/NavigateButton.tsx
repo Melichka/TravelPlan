@@ -10,28 +10,31 @@ import styles from "./styles.module.scss";
 
 type NavigateButtonProps = {
   text: string;
+  isActiveSwitcher?: boolean;
   isSwitcher?: boolean;
   isMain?: boolean;
 };
 
 export const NavigateButton: React.FC<NavigateButtonProps> = ({
   text,
+  isActiveSwitcher,
   isSwitcher,
   isMain,
 }) => {
   return (
     <Button
       className={classNames({
+        [styles["activSwitcher"]]: isActiveSwitcher,
         [styles["switcher"]]: isSwitcher,
-        [styles["default"]]: !isSwitcher && !isMain,
+        [styles["default"]]: !isSwitcher && !isMain && !isActiveSwitcher,
         [styles["main"]]: isMain,
       })}
       variant="outlined"
     >
       <Typography
         className={classNames({
-          [styles["default-menu-button-text"]]: !isSwitcher,
-          [styles["switcher-menu-button-text"]]: isSwitcher,
+          [styles["default-menu-button-text"]]: !isSwitcher && !isActiveSwitcher && !isMain,
+          [styles["switcher-menu-button-text"]]: isSwitcher || isActiveSwitcher,
         })}
       >
         {text}
