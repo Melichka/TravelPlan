@@ -1,0 +1,43 @@
+@import "src/components/styles/variables/color";
+@import "src/components/styles/variables/font";
+
+.switcher {
+  display: flex;
+  background-color: $activ-button;
+}
+
+.default {
+  display: flex;
+  background-color: $default-button-color;
+  border: 0;
+}
+
+.default:hover {
+  display: flex;
+  background-color: $default-button-color;
+  border: 0;
+}
+
+.main {
+  display: flex;
+  border-color: $white-border;
+}
+
+.main:hover {
+  display: flex;
+  border-color: $activ-button;
+}
+
+.switcher-menu-button-text,
+.default-menu-button-text {
+  font-family: $font-stack;
+  color: $text-color;
+}
+
+.switcher-menu-button-text {
+  font-size: $big-font-size;
+}
+
+.default-menu-button-text {
+  font-size: $medium-font-size;
+}
