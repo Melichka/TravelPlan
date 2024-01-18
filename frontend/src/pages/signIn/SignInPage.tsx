@@ -8,6 +8,7 @@ import { Password, SignInButton, SubmitButton } from "../../components";
 import styles from "./styles.module.scss";
 import { Typography } from "@mui/material";
 import { VARIANTS } from "./constants";
+import { SignInSwitcher } from "../../components/SignInSwitcher";
 
 export function SignInPage() {
   return (
@@ -19,7 +20,7 @@ export function SignInPage() {
       </div>
       <div className={styles.main}>
         <div className={styles.switcher}>
-          <SignInButton />
+          <SignInSwitcher />
         </div>
         <div className={styles.field}>
           <LogIn />
