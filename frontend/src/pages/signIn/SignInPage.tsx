@@ -21,7 +21,7 @@ export function SignInPage() {
       </div>
       <div className={styles.main}>
         <div className={styles.switcher}>
-          <SignInSwitcher />
+          <SignInSwitcher isActiveSwitcher={true} />
           <SignUpSwitcher />
         </div>
         <div className={styles.field}>
