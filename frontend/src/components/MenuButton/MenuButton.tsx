@@ -2,11 +2,11 @@ import React from "react";
 
 import { Button, Typography } from "@mui/material";
 
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation, Trans } from "react-i18next";
 
 import classNames from "classnames";
 
-import styles from  "./styles.module.scss";
+import styles from "./styles.module.scss";
 
 type MenuButtonProps = {
   text: string;
@@ -17,8 +17,8 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ text, isLarge }) => {
   return (
     <Button
       className={classNames({
-        [styles['large']]: isLarge,
-        [styles['default']]: !isLarge,
+        [styles["large"]]: isLarge,
+        [styles["default"]]: !isLarge,
       })}
     >
       <Typography
@@ -29,7 +29,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ text, isLarge }) => {
         variant="h3"
       >
         {" "}
-        <Trans i18nKey="description.part1">{text}</Trans>
+        {text}
       </Typography>
     </Button>
   );
