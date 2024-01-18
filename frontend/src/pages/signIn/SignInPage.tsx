@@ -1,43 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
+import { AuthorizationForm } from "src/components/AuthorizationForm";
 import { HeaderTitle } from "src/components/HeaderTitle";
-import { LogIn } from "src/components/LogIn";
-
-import { Password, SignInButton, SubmitButton } from "../../components";
+import { LoginForm } from "src/components/LoginForm";
+import { RegisterForm } from "src/components/RegisterForm";
 
 import styles from "./styles.module.scss";
-import { Typography } from "@mui/material";
-import { VARIANTS } from "./constants";
-import { SignInSwitcher } from "../../components/SignInSwitcher";
-import { SignUpSwitcher } from "../../components/SignUpSwitcher";
 
-export function SignInPage() {
+export const SignInPage: React.FC = () => {
+  const [switchForm, setSwitchForm] = useState<boolean>(true);
+
   return (
-    <div className={styles.signinPage}>
-      <div className={styles.image}>
-        <div className={styles.title}>
-          <HeaderTitle />
-        </div>
-      </div>
-      <div className={styles.main}>
-        <div className={styles.switcher}>
-          <SignInSwitcher isActiveSwitcher={true} />
-          <SignUpSwitcher />
-        </div>
-        <div className={styles.field}>
-          <LogIn />
-          <Password />
-        </div>
-        <SubmitButton />
-        <div className={styles.bottom}>
-          <Typography className={styles.text}>{VARIANTS}</Typography>
-          <div className={styles.alternative}>
-            <div className={styles.instagram}> </div>
-            <div className={styles.google}></div>
-            <div className={styles.vk}></div>
+    <>
+      <div className={styles.signinPage}>
+        <div className={styles.image}>
+          <div className={styles.title}>
+            <HeaderTitle />
           </div>
         </div>
+        <AuthorizationForm formSwitch={switchForm} setFormSwitch={setSwitchForm}>
+          {switchForm ? <LoginForm /> : <RegisterForm />}
+        </AuthorizationForm>
       </div>
-    </div>
+    </>
   );
-}
+};
