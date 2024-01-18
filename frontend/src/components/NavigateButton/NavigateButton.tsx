@@ -13,6 +13,7 @@ type NavigateButtonProps = {
   isActiveSwitcher?: boolean;
   isSwitcher?: boolean;
   isMain?: boolean;
+  onClick?: () => void;
 };
 
 export const NavigateButton: React.FC<NavigateButtonProps> = ({
@@ -20,6 +21,7 @@ export const NavigateButton: React.FC<NavigateButtonProps> = ({
   isActiveSwitcher,
   isSwitcher,
   isMain,
+  onClick
 }) => {
   return (
     <Button
@@ -30,6 +32,7 @@ export const NavigateButton: React.FC<NavigateButtonProps> = ({
         [styles["main"]]: isMain,
       })}
       variant="outlined"
+      onClick={onClick}
     >
       <Typography
         className={classNames({
