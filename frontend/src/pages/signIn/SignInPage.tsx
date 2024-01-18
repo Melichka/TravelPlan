@@ -26,11 +26,13 @@ export function SignInPage() {
           <Password />
         </div>
         <SubmitButton />
-        <Typography className={styles.text}>{VARIANTS}</Typography>
-        <div className={styles.altenative}>
-          <img src="./images/instagram.svg" alt="instagram" />
-          <img src="./images/vk.svg" alt="vk" />
-          <img src="./images/google.svg" alt="google" />
+        <div className={styles.bottom}>
+          <Typography className={styles.text}>{VARIANTS}</Typography>
+          <div className={styles.alternative}>
+            <div className={styles.instagram}> </div>
+            <div className={styles.google}></div>
+            <div className={styles.vk}></div>
+          </div>
         </div>
       </div>
     </div>
