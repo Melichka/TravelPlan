@@ -5,7 +5,7 @@ import LockIcon from "@mui/icons-material/Lock";
 
 import { InputAdornment, TextField } from "@mui/material";
 
-import { IconStyles, InputFieldStyles } from "./utils";
+import { IconStyles } from "./utils";
 
 import styles from "./styles.module.scss";
 
@@ -25,10 +25,10 @@ export const InputField: React.FC<InputFieldProps> = ({
       placeholder={placeholder}
       className={styles.field}
       type="text"
-      sx={InputFieldStyles()}
       fullWidth
-      variant="outlined"
+      variant="standard"
       InputProps={{
+        disableUnderline: true,
         startAdornment: (
           <InputAdornment position="start">
             {isLogin && <AccountCircleIcon sx={IconStyles()} />}
