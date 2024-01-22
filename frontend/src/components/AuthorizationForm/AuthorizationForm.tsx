@@ -1,12 +1,14 @@
 import React, { Children } from "react";
 import { PropsWithChildren } from "react";
+
+import { Typography } from "@mui/material";
+
 import { SignInSwitcher } from "../SignInSwitcher";
 import { SignUpSwitcher } from "../SignUpSwitcher";
-import { LogIn } from "../LogIn";
-import { Password } from "../Password";
 import { SubmitButton } from "../SubmitButton";
-import { Typography } from "@mui/material";
-import { VARIANTS } from "../../pages/signIn/constants";
+
+import { VARIANTS } from "src/pages/signIn/constants";
+
 import styles from "./styles.module.scss";
 
 type Props = PropsWithChildren<{
@@ -22,8 +24,14 @@ export const AuthorizationForm: React.FC<Props> = ({
   return (
     <div className={styles.main}>
       <div className={styles.switcher}>
-        <SignInSwitcher isActiveSwitcher={formSwitch === true} onClick={() => setFormSwitch(true)}/>
-        <SignUpSwitcher isActiveSwitcher={formSwitch === false} onClick={() => setFormSwitch(false)} />
+        <SignInSwitcher
+          isActiveSwitcher={formSwitch === true}
+          onClick={() => setFormSwitch(true)}
+        />
+        <SignUpSwitcher
+          isActiveSwitcher={formSwitch === false}
+          onClick={() => setFormSwitch(false)}
+        />
       </div>
       <div className={styles.field}>{children}</div>
       <SubmitButton />

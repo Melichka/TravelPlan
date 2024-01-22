@@ -24,7 +24,7 @@ function App() {
           <Routes>
             <Route path="/" Component={SearchPage} />
             <Route path="/city" Component={CityPage} />
-            <Route path="/signIn" Component={SignInPage} />
+            <Route path="/sign-in" Component={SignInPage} />
             <Route path="*" element={<h3>404</h3>} />
           </Routes>
         </BrowserRouter>
