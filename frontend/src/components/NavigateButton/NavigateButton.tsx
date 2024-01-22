@@ -2,8 +2,6 @@ import React from "react";
 
 import { Button, Typography } from "@mui/material";
 
-import { useTranslation, Trans } from "react-i18next";
-
 import classNames from "classnames";
 
 import styles from "./styles.module.scss";
@@ -21,14 +19,15 @@ export const NavigateButton: React.FC<NavigateButtonProps> = ({
   isActiveSwitcher,
   isSwitcher,
   isMain,
-  onClick
+  onClick,
 }) => {
+  const isDefault = !isSwitcher && !isMain && !isActiveSwitcher;
   return (
     <Button
       className={classNames({
         [styles["activSwitcher"]]: isActiveSwitcher,
         [styles["switcher"]]: isSwitcher,
-        [styles["default"]]: !isSwitcher && !isMain && !isActiveSwitcher,
+        [styles["default"]]: isDefault,
         [styles["main"]]: isMain,
       })}
       variant="outlined"
@@ -36,7 +35,8 @@ export const NavigateButton: React.FC<NavigateButtonProps> = ({
     >
       <Typography
         className={classNames({
-          [styles["default-menu-button-text"]]: !isSwitcher && !isActiveSwitcher && !isMain,
+          [styles["default-menu-button-text"]]:
+            !isSwitcher && !isActiveSwitcher,
           [styles["switcher-menu-button-text"]]: isSwitcher || isActiveSwitcher,
         })}
       >
