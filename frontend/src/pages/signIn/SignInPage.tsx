@@ -18,9 +18,10 @@ export const SignInPage: React.FC = () => {
             <HeaderTitle />
           </div>
         </div>
-        <AuthorizationForm formSwitch={switchForm} setFormSwitch={setSwitchForm}>
-          {switchForm ? <LoginForm /> : <RegisterForm />}
-        </AuthorizationForm>
+        <AuthorizationForm
+          formSwitch={switchForm}
+          setFormSwitch={setSwitchForm}
+        />
       </div>
     </>
   );
