@@ -1,13 +1,14 @@
-import React, { Children } from "react";
+import React, { useState } from "react";
 import { PropsWithChildren } from "react";
 
 import { Typography } from "@mui/material";
 
-import { SignInSwitcher } from "../SignInSwitcher";
-import { SignUpSwitcher } from "../SignUpSwitcher";
-import { SubmitButton } from "../SubmitButton";
-
 import { VARIANTS } from "src/pages/signIn/constants";
+
+import { LoginForm } from "../LoginForm";
+import { SubmitButton } from "../SubmitButton";
+import { Switcher } from "../Switcher";
+import { RegisterForm } from "../RegisterForm";
 
 import styles from "./styles.module.scss";
 
@@ -21,19 +22,22 @@ export const AuthorizationForm: React.FC<Props> = ({
   formSwitch,
   setFormSwitch,
 }) => {
+  const [currentTab, setCurrentTab] = useState(true);
+
+  const handleSwitch = (isSignIn: boolean) => {
+    setFormSwitch(isSignIn);
+    setCurrentTab(isSignIn);
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.switcher}>
-        <SignInSwitcher
-          isActiveSwitcher={formSwitch === true}
-          onClick={() => setFormSwitch(true)}
-        />
-        <SignUpSwitcher
-          isActiveSwitcher={formSwitch === false}
-          onClick={() => setFormSwitch(false)}
-        />
+        <Switcher isActiveSwitcher={currentTab} onClick={handleSwitch} />
       </div>
-      <div className={styles.field}>{children}</div>
+      <div className={styles.field}>
+        {currentTab ? <LoginForm /> : <RegisterForm />}
+        {children}
+      </div>
       <SubmitButton />
       <div className={styles.bottom}>
         <Typography className={styles.text}>{VARIANTS}</Typography>
