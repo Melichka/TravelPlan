@@ -1,0 +1,22 @@
+@import "src/components/styles/variables/color";
+@import "src/components/styles/variables/font";
+@import "src/components/styles/variables/property";
+
+.main,
+.tab {
+  display: flex;
+  border-radius: $small-border-radius;
+  border: 0;
+  color: $text-color;
+}
+
+.main {
+  width: 100%;
+  justify-content: space-between;
+  background-color: $default-button-color;
+}
+
+.tab {
+  width: 50%;
+  font-size: $big-font-size;
+}
