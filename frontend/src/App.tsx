@@ -8,6 +8,8 @@ import { CityPage } from "src/pages/city";
 import { SearchPage } from "src/pages/search";
 import { SignInPage } from "src/pages/signIn";
 
+import { Style } from "./pages/style/components";
+
 import { useTranslation, Trans } from "react-i18next";
 
 import "./index.scss";
@@ -15,34 +17,7 @@ import "./index.scss";
 import "./i18n";
 
 function App() {
-  const theme = createTheme({
-    components: {
-      MuiToggleButton: {
-        styleOverrides: {
-          root: {
-            "&.Mui-selected": {
-              color: "#a61700",
-              backgroundColor: "#FFA040",
-              boxShadow: " 0px 4px 4px rgba(0, 0, 0, 0.25)",
-              borderRadius: "30px",
-            },
-          },
-        },
-      },
-      MuiToggleButtonGroup: {
-        styleOverrides: {
-          grouped: {
-            "&:not(:last-of-type)": {
-              borderRadius: 30,
-            },
-            "&:not(:first-of-type)": {
-              borderRadius: 30,
-            },
-          },
-        },
-      },
-    },
-  });
+  const theme = createTheme(Style());
 
   return (
     <StyledEngineProvider injectFirst>
