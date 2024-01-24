@@ -22,22 +22,22 @@
   display: flex;
   background-color: $default-button-color;
   border: 0;
-}
 
-.default:hover {
-  display: flex;
-  background-color: $default-button-color;
-  border: 0;
+  &:hover {
+    display: flex;
+    background-color: $default-button-color;
+    border: 0;
+  }
 }
 
 .main {
   display: flex;
   border-color: $white-border;
-}
 
-.main:hover {
-  display: flex;
-  border-color: $activ-button;
+  &:hover {
+    display: flex;
+    border-color: $activ-button;
+  }
 }
 
 .switcher-menu-button-text,
