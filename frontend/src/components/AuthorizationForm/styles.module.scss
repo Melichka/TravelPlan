@@ -47,7 +47,7 @@
 
 .alternative {
   display: flex;
-  justify-self: center;
+  justify-content: center;
   flex-direction: row;
   width: 90%;
   height: 100px;
@@ -57,10 +57,8 @@
     background-image: url('./images/instagram.svg');
     background-repeat: no-repeat;
     background-size: 100%;
-    max-width: 30%;
-    min-width: 30%;
-    flex-grow: 1;
-
+    width: 32px;
+    height: 32px;
   }
 
   .google {
@@ -68,9 +66,8 @@
     background-image: url('./images/google.svg');
     background-repeat: no-repeat;
     background-size: 100%;
-    max-width: 30%;
-    min-width: 30%;
-    flex-grow: 1;
+    width: 32px;
+    height: 32px;
   }
 
   .vk {
@@ -78,8 +75,7 @@
     background-image: url('./images/vk.svg');
     background-repeat: no-repeat;
     background-size: 100%;
-    max-width: 30%;
-    min-width: 30%;
-    flex-grow: 1;
+    width: 32px;
+    height: 32px;
   }
 }
