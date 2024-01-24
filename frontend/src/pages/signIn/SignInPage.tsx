@@ -23,13 +23,13 @@ export const SignInPage: React.FC = () => {
         <div className={styles.image}>
           <div className={styles.title}>
             <HeaderTitle />
-            <SwitchLanguage />
           </div>
         </div>
         <AuthorizationForm
           formSwitch={switchForm}
           setFormSwitch={setSwitchForm}
         />
+            <SwitchLanguage />
       </div>
     </>
   );
