@@ -2,9 +2,8 @@ import React from "react";
 
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 
-import { SIGN_IN, SIGN_UP } from "./constants";
-
 import styles from "./styles.module.scss";
+import { useTranslation } from "react-i18next";
 
 type SwitcherProps = {
   isActiveSwitcher: boolean;
@@ -16,6 +15,7 @@ export const Switcher: React.FC<SwitcherProps> = ({
   onClick,
 }) => {
   const [alignment, setAlignment] = React.useState(true);
+  const { t } = useTranslation();
 
   const handleAlignment = (
     event: React.MouseEvent<HTMLElement>,
@@ -42,7 +42,7 @@ export const Switcher: React.FC<SwitcherProps> = ({
         }}
         value={true}
       >
-        {SIGN_IN}
+        {t("SignInButton")}
       </ToggleButton>
       <ToggleButton
         classes={{
@@ -51,7 +51,7 @@ export const Switcher: React.FC<SwitcherProps> = ({
         }}
         value={false}
       >
-        {SIGN_UP}
+        {t("SignUpButton")}
       </ToggleButton>
     </ToggleButtonGroup>
   );

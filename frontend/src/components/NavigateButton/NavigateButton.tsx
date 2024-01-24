@@ -5,6 +5,7 @@ import { Button, Typography } from "@mui/material";
 import classNames from "classnames";
 
 import styles from "./styles.module.scss";
+import { useTranslation } from "react-i18next";
 
 type NavigateButtonProps = {
   text: string;
@@ -21,6 +22,7 @@ export const NavigateButton: React.FC<NavigateButtonProps> = ({
   isMain,
   onClick,
 }) => {
+  const { t } = useTranslation();
   const isDefault = !isSwitcher && !isMain && !isActiveSwitcher;
   return (
     <Button
@@ -40,7 +42,7 @@ export const NavigateButton: React.FC<NavigateButtonProps> = ({
           [styles["switcher-menu-button-text"]]: isSwitcher || isActiveSwitcher,
         })}
       >
-        {text}
+        {t(text)}
       </Typography>
     </Button>
   );

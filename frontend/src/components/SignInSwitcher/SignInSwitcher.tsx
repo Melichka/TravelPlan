@@ -7,7 +7,7 @@ export const SignInSwitcher = ({ isActiveSwitcher, onClick }) => {
   const { t } = useTranslation();
   return (
     <NavigateButton
-      text={t("SignUpButton")}
+      text={t("SignInButton")}
       isActiveSwitcher={isActiveSwitcher}
       onClick={onClick}
     />
