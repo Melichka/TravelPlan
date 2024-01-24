@@ -1,4 +1,4 @@
-import React, { useTransition } from "react";
+import React from "react";
 
 import { MenuButton } from "src/components/MenuButton";
 import { ENTERTAINMENT } from "./constants";
