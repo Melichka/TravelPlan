@@ -1,30 +1,40 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-import { Button, MenuItem, Typography } from "@mui/material";
+import { Select, MenuItem } from "@mui/material";
 
-import { useTranslation, Trans } from "react-i18next";
+import styles from "./styles.module.scss"
 
 const lngs = {
-  en: { nativeName: "English" },
-  ru: { nativeName: "Russian" },
+  en: { flag: "public/assets/flags/usa.png" },
+  ru: { flag: "public/assets/flags/russia.jpg" },
 };
 
 export const SwitchLanguage = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
+
+  const handleChangeLanguage = (event) => {
+    const selectedLanguage = event.target.value;
+    i18n.changeLanguage(selectedLanguage);
+  };
+
   return (
     <div>
-      {Object.keys(lngs).map((lng) => (
-        <button
-          key={lng}
-          style={{
-            fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
-          }}
-          type="submit"
-          onClick={() => i18n.changeLanguage(lng)}
-        >
-          {lngs[lng].nativeName}
-        </button>
-      ))}
+      <Select
+        value={i18n.language}
+        onChange={handleChangeLanguage}
+        label="Select Language"
+      >
+        {Object.keys(lngs).map((lng) => (
+          <MenuItem key={lng} value={lng}>
+            <img
+              src={lngs[lng].flag}
+              alt={`${lng} flag`}
+              className={styles.image}
+            />
+          </MenuItem>
+        ))}
+      </Select>
     </div>
   );
 };

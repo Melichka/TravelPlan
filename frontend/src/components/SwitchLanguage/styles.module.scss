@@ -1,0 +1,13 @@
+@import "src/components/styles/variables/color";
+@import "src/components/styles/variables/font";
+@import "src/components/styles/variables/property";
+
+.main {
+  display: flex;
+  justify-self: end;
+  border: 0;
+}
+
+.image {
+  width: 20px,
+}
