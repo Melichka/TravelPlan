@@ -7,13 +7,23 @@ import { SupportButton } from "src/components/SupportButton";
 import { Title } from "src/components/Title";
 
 import styles from "./styles.module.scss";
+import { useTranslation } from "react-i18next";
 
 export function SearchPage() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (language: string | undefined) => {
+    console.log('sELECTED LANgUAGe', language)
+    i18n.changeLanguage(language);
+  };
   return (
     <div className={styles.searchPage}>
       <div className={styles.buttons}>
         <SignInButton />
         <SupportButton />
+        <button onClick={() => changeLanguage("en")}>EN</button>
+      <button onClick={() => changeLanguage("ru")}>RU</button>
+
       </div>
       <div className={styles.main}>
         <div className={styles.assets}>

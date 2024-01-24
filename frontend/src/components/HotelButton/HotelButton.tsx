@@ -1,8 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-import { HOTEL } from "./constants";
 import { MenuButton } from "src/components/MenuButton";
 
 export const HotelButton = () => {
-  return <MenuButton text={HOTEL} />;
+  const { t } = useTranslation();
+  return <MenuButton text={t("HotelButton")} />;
 };
