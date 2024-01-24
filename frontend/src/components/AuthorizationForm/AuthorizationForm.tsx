@@ -11,6 +11,7 @@ import { Switcher } from "../Switcher";
 import { RegisterForm } from "../RegisterForm";
 
 import styles from "./styles.module.scss";
+import { t } from "i18next";
 
 type Props = PropsWithChildren<{
   formSwitch: boolean;
@@ -40,7 +41,9 @@ export const AuthorizationForm: React.FC<Props> = ({
       </div>
       <SubmitButton />
       <div className={styles.bottom}>
-        <Typography className={styles.text}>{VARIANTS}</Typography>
+        <Typography className={styles.text}>
+          {t("description.sign-in")}
+        </Typography>
         <div className={styles.alternative}>
           <div className={styles.instagram}> </div>
           <div className={styles.google}></div>
