@@ -4,5 +4,12 @@
   "SupportButton": "Support",
   "SightButton": "Sight",
   "HotelButton": "Hotel",
-  "EntertainmentButton": "Entertainment"
+  "EntertainmentButton": "Entertainment",
+  "Login": "Login",
+  "Password": "Password",
+  "SubmitButton": "Submit",
+
+  "description": {
+    "sign-in": "- or sign in with -"
+  }
 }

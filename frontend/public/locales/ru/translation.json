@@ -4,5 +4,12 @@
   "SupportButton": "Поддержка",
   "SightButton": "Достопримечательности",
   "HotelButton": "Отели",
-  "EntertainmentButton": "Развлечения"
+  "EntertainmentButton": "Развлечения",
+  "Login": "Имя пользователя",
+  "Password": "Пароль",
+  "SubmitButton": "Отправить",
+
+  "description": {
+    "sign-in": "- или войдите с помощью -"
+  }
 }
