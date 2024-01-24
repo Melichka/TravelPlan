@@ -19,6 +19,12 @@ import "./i18n";
 function App() {
   const theme = createTheme(Style());
 
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
+
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>

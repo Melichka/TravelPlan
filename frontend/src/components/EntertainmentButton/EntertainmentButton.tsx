@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useTransition } from "react";
 
 import { MenuButton } from "src/components/MenuButton";
 import { ENTERTAINMENT } from "./constants";
+import { useTranslation } from "react-i18next";
 
 export const EntertainmentButton = () => {
-  return <MenuButton text={ENTERTAINMENT} />;
+  const { t } = useTranslation();
+  return <MenuButton text={t("EntertainmentButton")} />;
 };

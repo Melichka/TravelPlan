@@ -1,3 +1,8 @@
 {
-  "SignInButton": "Войти"
+  "SignInButton": "Войти",
+  "SignUpButton": "Регистрация",
+  "SupportButton": "Поддержка",
+  "SightButton": "Достопримечательности",
+  "HotelButton": "Отели",
+  "EntertainmentButton": "Развлечения"
 }
