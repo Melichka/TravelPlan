@@ -12,45 +12,47 @@ import { SupportButton } from "src/components/SupportButton";
 
 import { FavoriteBorderTwoToneIconStyles } from "src/pages/city/utils";
 
-import { Trans } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 import styles from "./styles.module.scss";
 
-
 export const CityPage = () => {
+  const { t, i18n } = useTranslation();
 
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
   return (
-    <div className={styles['city-page']}>
-      <div className={styles['city-page-header']}>
-        <div className={styles['city-page-title']}>
+    <div className={styles["city-page"]}>
+      <div className={styles["city-page-header"]}>
+        <div className={styles["city-page-title"]}>
           <HeaderTitle />
         </div>
-        <div className={styles['city-page-buttons']}>
+        <div className={styles["city-page-buttons"]}>
           <SwitchLanguage />
           <SignInButton />
           <SupportButton />
         </div>
       </div>
-      <div className={styles['city-page-main']}>
-
-        <div className={styles['city-page-main-card']}>
-          <div className={styles['city-page-main-card-header']}>
-            <div className={styles['city-page-main-card-header-name']}>
+      <div className={styles["city-page-main"]}>
+        <div className={styles["city-page-main-card"]}>
+          <div className={styles["city-page-main-card-header"]}>
+            <div className={styles["city-page-main-card-header-name"]}>
               <h3></h3>
             </div>
             <FavoriteBorderTwoToneIcon sx={FavoriteBorderTwoToneIconStyles()} />
           </div>
-          <div className={styles['city-page-main-card-image']}></div>
+          <div className={styles["city-page-main-card-image"]}></div>
         </div>
-        <div className={styles['city-page-description']}>
-          <div className={styles['city-page-description-buttons']}>
-            <div className={styles['city-page-description-sight']}>
+        <div className={styles["city-page-description"]}>
+          <div className={styles["city-page-description-buttons"]}>
+            <div className={styles["city-page-description-sight"]}>
               <SightButton />
             </div>
-            <div className={styles['city-page-description-hotel']}>
+            <div className={styles["city-page-description-hotel"]}>
               <HotelButton />
             </div>
-            <div className={styles['city-page-description-entertainment']}>
+            <div className={styles["city-page-description-entertainment"]}>
               <EntertainmentButton />
             </div>
           </div>
