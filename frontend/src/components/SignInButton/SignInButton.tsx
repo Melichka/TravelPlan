@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation, withTranslation } from "react-i18next";
 
-import { NavigateButton } from "../NavigateButton";
+import { NavigateButton } from "src/components/NavigateButton";
 
 import styles from "./styles.module.scss";
 

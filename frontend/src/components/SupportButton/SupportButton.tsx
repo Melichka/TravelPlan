@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { NavigateButton } from "../NavigateButton";
+import { NavigateButton } from "src/components/NavigateButton";
 
 export const SupportButton = () => {
   const { t } = useTranslation();

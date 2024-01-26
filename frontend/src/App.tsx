@@ -4,13 +4,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
 import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 
+import { useTranslation, Trans } from "react-i18next";
+
 import { CityPage } from "src/pages/city";
 import { SearchPage } from "src/pages/search";
 import { SignInPage } from "src/pages/signIn";
 
 import { Style } from "./pages/style/components";
-
-import { useTranslation, Trans } from "react-i18next";
 
 import "./index.scss";
 

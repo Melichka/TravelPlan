@@ -5,7 +5,7 @@
 .activSwitcher {
   display: flex;
   width: 50%;
-  background-color: $activ-button;
+  background-color: $active-button;
   border-radius: $small-border-radius;
   border: 0;
   box-shadow: $shadow;
@@ -36,7 +36,7 @@
 
   &:hover {
     display: flex;
-    border-color: $activ-button;
+    border-color: $active-button;
   }
 }
 

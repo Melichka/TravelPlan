@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useHomeNavigation } from "../../hooks/useHomeNavigation";
+import { useHomeNavigation } from "src/hooks/useHomeNavigation";
 
 import { BOTTOM_TITLE, UPPER_TITLE } from "./constants";
 

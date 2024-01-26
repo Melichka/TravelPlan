@@ -1,7 +1,7 @@
 import React from "react";
 
-import { LogIn } from "../LogIn/LogIn";
-import { Password } from "../Password";
+import { LogIn } from "src/components/LogIn";
+import { Password } from "src/components/Password";
 
 export const LoginForm = () => {
   return (
