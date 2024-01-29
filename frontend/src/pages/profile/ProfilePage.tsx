@@ -12,7 +12,6 @@ import { useTranslation } from "react-i18next";
 
 export function ProfilePage() {
   const { t, i18n } = useTranslation();
-
   const changeLanguage = (language: string | undefined) => {
     console.log("sELECTED LANgUAGe", language);
     i18n.changeLanguage(language);
