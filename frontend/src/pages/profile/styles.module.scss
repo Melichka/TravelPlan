@@ -1,0 +1,58 @@
+@import "src/components/styles/variables/color";
+@import "src/components/styles/variables/property";
+
+.profilePage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+  background-image: url("./images/backgraund.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  display: flex;
+  margin: 2%;
+  width: 8%;
+}
+
+.button{
+  display: flex;
+  justify-content: end;
+  margin: 2%;
+  width: 92%;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  margin: 3%;
+}
+
+.image {
+  display: flex;
+  align-self: flex-end;
+  width: 20%;
+  height: 30dvh;
+  background-image: url('/assets/images/spider.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  background-color: $profile-model;
+  width: 90%;
+  height: 80dvh;
+  border-radius: $tiny-border-radius;
+}
