@@ -1,5 +1,6 @@
 @import "src/components/styles/variables/color";
 @import "src/components/styles/variables/property";
+@import "src/components/styles/variables/font";
 
 .profilePage {
   display: flex;
@@ -23,7 +24,7 @@
   width: 8%;
 }
 
-.button{
+.button {
   display: flex;
   justify-content: end;
   margin: 2%;
@@ -55,4 +56,57 @@
   width: 90%;
   height: 80dvh;
   border-radius: $tiny-border-radius;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 15dvh;
+
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 10%;
+  height: 10dvh;
+  background-image: url('./images/icon.svg');
+  background-repeat: no-repeat;
+  margin-left: 2%;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20dvh;
+}
+
+.place {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50dvh;
+
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $modal-bg;
+  width: 20%;
+  height: 40dvh;
+  border-radius: $tiny-border-radius;
+  box-shadow: $shadow;
+}
+
+.text{
+  margin-left: 3%;
+  font-size: $medium-font-size;
+  color: $bg-color;
 }
