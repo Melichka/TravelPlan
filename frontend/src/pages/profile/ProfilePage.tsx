@@ -1,16 +1,14 @@
 import React from "react";
 
-import { SearchBar } from "src/components/SearchBar";
-import { SignInButton } from "src/components/SignInButton";
-import { Space } from "src/components/Space";
+import { Typography } from "@mui/material";
+
+import { HeaderTitle } from "src/components/HeaderTitle";
 import { SupportButton } from "src/components/SupportButton";
 import { SwitchLanguage } from "src/components/SwitchLanguage";
-import { Title } from "src/components/Title";
 
 import styles from "./styles.module.scss";
 
 import { useTranslation } from "react-i18next";
-import { HeaderTitle } from "../../components";
 
 export function ProfilePage() {
   const { t, i18n } = useTranslation();
@@ -27,11 +25,25 @@ export function ProfilePage() {
         </div>
         <div className={styles.button}>
           <SupportButton />
+          <SwitchLanguage />
         </div>
       </div>
       <div className={styles.main}>
         <div className={styles.content}>
-          <div></div>
+          <div className={styles.info}>
+            <div className={styles.photo}></div>
+            <h1></h1>
+          </div>
+          <Typography className={styles.text}>
+            {t("description.my-tags")}
+          </Typography>
+          <div className={styles.tag}></div>
+          <Typography className={styles.text}>
+            {t("description.my-favorite-place")}
+          </Typography>
+          <div className={styles.place}>
+            <div className={styles.card}></div>
+          </div>
         </div>
         <div className={styles.image}></div>
       </div>
