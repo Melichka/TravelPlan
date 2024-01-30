@@ -1,0 +1,112 @@
+@import "src/components/styles/variables/color";
+@import "src/components/styles/variables/property";
+@import "src/components/styles/variables/font";
+
+.profilePage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+  background-image: url("./images/background.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  display: flex;
+  margin: 2%;
+  width: 8%;
+}
+
+.button {
+  display: flex;
+  justify-content: end;
+  margin: 2%;
+  width: 92%;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  margin: 3%;
+}
+
+.image {
+  display: flex;
+  align-self: flex-end;
+  width: 20%;
+  height: 30dvh;
+  background-image: url('/assets/images/spider.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  background-color: $profile-model;
+  width: 90%;
+  height: 80dvh;
+  border-radius: $tiny-border-radius;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 15dvh;
+
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 10%;
+  height: 10dvh;
+  background-image: url('./images/icon.svg');
+  background-repeat: no-repeat;
+  margin-left: 2%;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20dvh;
+}
+
+.place {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50dvh;
+
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $modal-bg;
+  width: 20%;
+  height: 40dvh;
+  border-radius: $tiny-border-radius;
+  box-shadow: $shadow;
+}
+
+.text{
+  margin-left: 3%;
+  font-size: $medium-font-size;
+  color: $bg-color;
+}
