@@ -5,7 +5,10 @@
     "packages/*"
   ],
   "dependencies": {
-    "@nestjs/swagger": "^7.2.0"
+    "@nestjs/swagger": "^7.2.0",
+    "@nestjs/typeorm": "^10.0.1",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "lerna": "^8.0.2"
