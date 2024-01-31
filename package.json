@@ -1,0 +1,18 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@nestjs/swagger": "^7.2.0"
+  },
+  "devDependencies": {
+    "lerna": "^8.0.2"
+  },
+  "scripts": {
+    "start:frontend": "lerna run --scope frontend start --stream",
+    "start:backend": "lerna run --scope backend start --stream",
+    "start": "lerna run start"
+  }
+}

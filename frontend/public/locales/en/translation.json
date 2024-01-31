@@ -10,6 +10,8 @@
   "SubmitButton": "Submit",
 
   "description": {
-    "sign-in": "- or sign in with -"
+    "sign-in": "- or sign in with -",
+    "my-tags": "My tags: ",
+    "my-favorite-place": "My favorite place: "
   }
 }
