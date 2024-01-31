@@ -11,8 +11,8 @@
     "lerna": "^8.0.2"
   },
   "scripts": {
-    "start:frontend": "cd frontend && npm start",
-    "start:backend": "cd backend && npm start",
+    "start:frontend": "lerna run --scope frontend start --stream",
+    "start:backend": "lerna run --scope backend start --stream",
     "start": "lerna run start"
   }
 }
