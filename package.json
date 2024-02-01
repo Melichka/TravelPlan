@@ -5,8 +5,10 @@
     "packages/*"
   ],
   "dependencies": {
+    "@nestjs/common": "^10.3.1",
     "@nestjs/swagger": "^7.2.0",
     "@nestjs/typeorm": "^10.0.1",
+    "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
     "typeorm": "^0.3.20"
   },
