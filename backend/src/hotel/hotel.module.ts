@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Hotel } from '../entities/hotel';
+import { Hotel } from '../entities/Hotel';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Hotel])],

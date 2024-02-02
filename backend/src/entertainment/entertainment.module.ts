@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Entertainment } from '../entities/entertainment';
+import { Entertainment } from '../entities/Entertainment';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Entertainment])],

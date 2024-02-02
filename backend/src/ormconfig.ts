@@ -1,10 +1,10 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { City } from './entities/city';
-import { Entertainment } from './entities/entertainment';
-import { Hotel } from './entities/hotel';
-import { Sight } from './entities/sight';
-import { Tag } from './entities/tag';
-import { User } from './entities/user';
+import { City } from './entities/City';
+import { Entertainment } from './entities/Entertainment';
+import { Hotel } from './entities/Hotel';
+import { Sight } from './entities/Sight';
+import { Tag } from './entities/Tag';
+import { User } from './entities/User';
 
 export const ormConfig: TypeOrmModuleOptions = {
   type: 'sqlite',
