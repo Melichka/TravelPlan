@@ -5,3 +5,5 @@ node_modules
 dist
 
 sql.sqlite
+
+.env

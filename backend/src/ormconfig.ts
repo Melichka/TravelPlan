@@ -5,21 +5,19 @@ import { Hotel } from './entities/Hotel';
 import { Sight } from './entities/Sight';
 import { Tag } from './entities/Tag';
 import { User } from './entities/User';
-
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 
 dotenv.config();
 
 export const getEnvKey = () => {
-  const dbType = process.env.DB_TYPE;
   const dbName = process.env.DB_NAME;
-
-  return { dbType, dbName };
+  return { dbName };
 };
+const envKeys = getEnvKey();
 
 export const ormConfig: TypeOrmModuleOptions = {
-  type: 'dbType',
-  database: 'dbName',
+  type: 'sqlite',
+  database: envKeys.dbName,
   synchronize: true,
   entities: [City, User, Entertainment, Sight, Hotel, Tag],
 };
