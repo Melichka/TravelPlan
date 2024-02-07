@@ -20,8 +20,8 @@ export class EntertainmentService {
   }
 
   async create(entertainment: Partial<Entertainment>): Promise<Entertainment> {
-    const newentertainment = this.entertainmentRepository.create(entertainment);
-    return this.entertainmentRepository.save(newentertainment);
+    const newEntertainment = this.entertainmentRepository.create(entertainment);
+    return this.entertainmentRepository.save(newEntertainment);
   }
 
   async update(

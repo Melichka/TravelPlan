@@ -20,8 +20,8 @@ export class TagService {
   }
 
   async create(tag: Partial<Tag>): Promise<Tag> {
-    const newtag = this.tagRepository.create(tag);
-    return this.tagRepository.save(newtag);
+    const newTag = this.tagRepository.create(tag);
+    return this.tagRepository.save(newTag);
   }
 
   async update(id: number, tag: Partial<Tag>): Promise<Tag> {

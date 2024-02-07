@@ -20,8 +20,8 @@ export class SightService {
   }
 
   async create(tag: Partial<Sight>): Promise<Sight> {
-    const newsight = this.sightRepository.create(tag);
-    return this.sightRepository.save(newsight);
+    const newSight = this.sightRepository.create(tag);
+    return this.sightRepository.save(newSight);
   }
 
   async update(id: number, tag: Partial<Sight>): Promise<Sight> {

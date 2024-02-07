@@ -20,8 +20,8 @@ export class HotelService {
   }
 
   async create(hotel: Partial<Hotel>): Promise<Hotel> {
-    const newhotel = this.hotelRepository.create(hotel);
-    return this.hotelRepository.save(newhotel);
+    const newHotel = this.hotelRepository.create(hotel);
+    return this.hotelRepository.save(newHotel);
   }
 
   async update(id: number, hotel: Partial<Hotel>): Promise<Hotel> {

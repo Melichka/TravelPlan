@@ -20,8 +20,8 @@ export class CityService {
   }
 
   async create(city: Partial<City>): Promise<City> {
-    const newcity = this.cityRepository.create(city);
-    return this.cityRepository.save(newcity);
+    const newСity = this.cityRepository.create(city);
+    return this.cityRepository.save(newСity);
   }
 
   async update(id: number, city: Partial<City>): Promise<City> {
