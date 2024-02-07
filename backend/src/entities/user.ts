@@ -14,7 +14,7 @@ export class User {
   @Column({ name: 'email', length: 180, nullable: false })
   email: string;
 
-  @Column({ name: 'password', length: 180, nullable: false })
+  @Column({ name: 'password', nullable: false })
   password: string;
 
   @Column({ name: 'isAdministrator', nullable: false })
