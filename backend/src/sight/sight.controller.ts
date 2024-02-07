@@ -12,7 +12,7 @@ import {
 import { SightService } from './sight.service';
 import { Sight } from 'src/entities/Sight';
 
-@Controller('tag')
+@Controller('sight')
 export class SightController {
   constructor(private readonly sightService: SightService) {}
 
