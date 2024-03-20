@@ -19,4 +19,10 @@ export class User {
 
   @Column({ name: 'isAdministrator', nullable: false })
   isAdministrator: boolean;
+
+  @Column({
+    name: 'refreshToken',
+    nullable: true,
+  })
+  refreshToken: string;
 }

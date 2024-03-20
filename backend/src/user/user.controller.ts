@@ -14,11 +14,12 @@ import { User } from 'src/entities/User';
 
 @Controller('users')
 export class UserController {
-  constructor(private readonly userService: UserService) {}
+  constructor(private userService: UserService) {}
 
   @Get()
   async findAll(): Promise<User[]> {
-    return this.userService.findAll();
+    // Используем метод для получения userRepository
+    return this.userService.getUserRepository().find();
   }
 
   @Get(':id')
