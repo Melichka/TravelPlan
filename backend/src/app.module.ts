@@ -12,6 +12,7 @@ import { TagModule } from './tag/tag.module';
 import { UserModule } from './user/user.module';
 
 import { ormConfig } from './ormconfig';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { ormConfig } from './ormconfig';
     UserModule,
     TagModule,
     SightModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
