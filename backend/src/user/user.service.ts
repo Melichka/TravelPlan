@@ -10,12 +10,10 @@ export class UserService {
     private userRepository: Repository<User>,
   ) {}
 
-  // Метод для получения userRepository
   getUserRepository(): Repository<User> {
     return this.userRepository;
   }
 
-  // Остальные методы класса остаются без изменений
   async findAll(): Promise<User[]> {
     return this.userRepository.find();
   }

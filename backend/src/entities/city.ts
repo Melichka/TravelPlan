@@ -1,4 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
+import { Tag } from './Tag';
+import { Place } from './Place';
 
 @Entity('city')
 export class City {
@@ -16,4 +18,10 @@ export class City {
 
   @Column({ name: 'favourite', nullable: false })
   favourite: boolean;
+
+  @ManyToMany(() => Tag, (tag) => tag.cities)
+  tags: Tag[];
+
+  @ManyToMany(() => Place, (place) => place.cities)
+  places: Place[];
 }

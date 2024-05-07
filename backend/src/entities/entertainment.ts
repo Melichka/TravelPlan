@@ -1,19 +1,18 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, Column, ManyToMany } from 'typeorm';
+import { Place } from './Place';
+import { Tag } from './Tag';
 
 @Entity('entertainment')
-export class Entertainment {
-  @PrimaryGeneratedColumn()
-  id: number;
+export class Entertainment extends Place {
+  @Column({ type: 'time' })
+  openingTime: string;
 
-  @Column({ name: 'name', length: 70, nullable: false })
-  name: string;
+  @Column({ type: 'time' })
+  closingTime: string;
 
-  @Column({ name: 'description', length: 180, nullable: false })
-  description: string;
+  @Column({ type: 'decimal', precision: 10, scale: 2 })
+  price: number;
 
-  @Column({ name: 'imageUrl', nullable: false })
-  imageUrl: string;
-
-  @Column({ name: 'favourite', nullable: false })
-  favourite: boolean;
+  @ManyToMany(() => Tag, (tag) => tag.entertainments)
+  tags: Tag[];
 }

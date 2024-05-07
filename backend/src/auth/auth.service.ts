@@ -2,11 +2,12 @@ import {
   BadRequestException,
   Injectable,
   NotFoundException,
+  UnauthorizedException,
 } from '@nestjs/common';
 import { UserService } from '../user/user.service';
-import { JwtService } from '@nestjs/jwt';
-import { SignInUserDto } from './types';
+import { CreateUserDto, SignInUserDto } from '../types/types';
 import * as argon2 from 'argon2';
+import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class AuthService {
@@ -15,26 +16,29 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-  async validateUser(username: number, pass: string): Promise<any> {
-    const user = await this.usersService.findOne(username);
-    if (user && user.password === pass) {
-      const { password, ...result } = user;
-      return result;
+  async validateUser(email: string, password: string): Promise<any> {
+    const user = await this.usersService.findOneByEmail(email);
+    if (!user) {
+      throw new UnauthorizedException('User not found');
     }
-    return null;
+    const passwordIsMatch = await argon2.verify(user.password, password);
+    if (!passwordIsMatch) {
+      throw new UnauthorizedException('Invalid password');
+    }
+    return user;
   }
 
   async signIn(payload: SignInUserDto) {
     const user = await this.usersService.findOneByEmail(payload.email);
     if (!user) {
-      throw new NotFoundException();
+      throw new NotFoundException('User not found');
     }
     const passwordMatches = await argon2.verify(
       payload.password,
       user.password,
     );
     if (!passwordMatches) {
-      throw new BadRequestException();
+      throw new BadRequestException('Invalid password');
     }
     const tokens = await this.getTokens(user.id, user.email);
     await this.updateRefreshToken(user.id, tokens.refresh_token);
@@ -43,40 +47,37 @@ export class AuthService {
 
   async getTokens(id: number, email: string) {
     const [access_token, refresh_token] = await Promise.all([
-      this.jwtService.signAsync(
-        { sub: id, email },
-        { secret: '123', expiresIn: '7d' },
-      ),
-      this.jwtService.signAsync(
-        { sub: id, email },
-        { secret: '123', expiresIn: '30d' },
-      ),
+      this.jwtService.signAsync({ sub: id, email }, { expiresIn: '7d' }),
+      this.jwtService.signAsync({ sub: id, email }, { expiresIn: '30d' }),
     ]);
     return { access_token, refresh_token };
   }
 
   async updateRefreshToken(id: number, refreshToken: string) {
     const hashFromRefreshToken = await argon2.hash(refreshToken);
-    await this.usersService.update(id, {
-      refreshToken: hashFromRefreshToken,
-    });
+    await this.usersService.update(id, { refreshToken: hashFromRefreshToken });
   }
 
-  async signUp(p: any) {
-    const payload = { username: user.username, sub: user.userId };
-    return {
-      access_token: this.jwtService.sign(payload),
-    };
+  async signUp(newUser: CreateUserDto) {
+    const existingUser = await this.usersService.findOneByEmail(newUser.email);
+    if (existingUser) {
+      throw new BadRequestException('User with this email already exists');
+    }
+    const user = await this.usersService.create(newUser);
+
+    const payload = { sub: user.id, email: user.email };
+    const accessToken = await this.jwtService.signAsync(payload);
+
+    return { access_token: accessToken };
   }
 
   async signOut(user: any) {
-    const payload = { username: user.username, sub: user.userId };
+    const existingUser = await this.usersService.findOneByEmail(user.email);
+    if (!existingUser) {
+      throw new NotFoundException('User not found');
+    }
+    await this.usersService.update(user.id, { refreshToken: null });
 
-    await this.usersService.update(id, {
-      refreshToken: null,
-    });
-    return {
-      access_token: this.jwtService.(payload),
-    };
+    return { message: 'Signed out successfully' };
   }
 }

@@ -1,7 +1,16 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToMany,
+  BaseEntity,
+  JoinTable,
+} from 'typeorm';
+import { User } from './User';
+import { City } from './City';
 
 @Entity('place')
-export class Place {
+export class Place extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -16,4 +25,21 @@ export class Place {
 
   @Column({ name: 'favourite', nullable: false })
   favourite: boolean;
+
+  @ManyToMany(() => User, (user) => user.places)
+  users: User[];
+
+  @ManyToMany(() => City)
+  @JoinTable({
+    name: 'place_city',
+    joinColumn: {
+      name: 'place_id',
+      referencedColumnName: 'id',
+    },
+    inverseJoinColumn: {
+      name: 'city_id',
+      referencedColumnName: 'id',
+    },
+  })
+  cities: City[];
 }

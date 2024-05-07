@@ -6,6 +6,7 @@ import { Sight } from './entities/Sight';
 import { Tag } from './entities/Tag';
 import { User } from './entities/User';
 import * as dotenv from 'dotenv';
+import { Place } from './entities/Place';
 
 dotenv.config();
 
@@ -19,5 +20,5 @@ export const ormConfig: TypeOrmModuleOptions = {
   type: 'sqlite',
   database: envKeys.dbName,
   synchronize: true,
-  entities: [City, User, Entertainment, Sight, Hotel, Tag],
+  entities: [City, User, Entertainment, Sight, Hotel, Tag, Place],
 };

@@ -18,13 +18,22 @@ export class UserController {
 
   @Get()
   async findAll(): Promise<User[]> {
-    // Используем метод для получения userRepository
     return this.userService.getUserRepository().find();
   }
 
   @Get(':id')
   async findOne(@Param('id') id: number): Promise<User> {
     const user = await this.userService.findOne(id);
+    if (!user) {
+      throw new NotFoundException('User does not exist!');
+    } else {
+      return user;
+    }
+  }
+
+  @Get(':email')
+  async findOneByEmail(@Param('email') email: string): Promise<User> {
+    const user = await this.userService.findOneByEmail(email);
     if (!user) {
       throw new NotFoundException('User does not exist!');
     } else {

@@ -13,9 +13,15 @@ import { UserModule } from './user/user.module';
 
 import { ormConfig } from './ormconfig';
 import { AuthModule } from './auth/auth.module';
+import { ConfigModule } from '@nestjs/config';
+import configuration from './configuration';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      load: [configuration],
+    }),
     TypeOrmModule.forRoot(ormConfig),
     CityModule,
     EntertainmentModule,
