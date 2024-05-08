@@ -5,6 +5,7 @@ import { User } from 'src/entities/User';
 import { CreateUserDto } from 'src/dto/createUserDto';
 import * as argon2 from 'argon2';
 import { JwtService } from '@nestjs/jwt';
+import { CreateAdministratorDto } from 'src/dto/createAdministratorDto';
 
 @Injectable()
 export class UserService {
@@ -49,6 +50,17 @@ export class UserService {
     });
 
     return { user, token };
+  }
+
+  async createUserAdmin(userData: CreateAdministratorDto): Promise<User> {
+    const { name, surname, email, password } = userData;
+    const user = new User();
+    user.name = name;
+    user.surname = surname;
+    user.email = email;
+    user.password = password;
+    user.isAdministrator = true; // Устанавливаем пользователя администратором
+    return await this.userRepository.save(user);
   }
 
   async update(id: number, user: Partial<User>): Promise<User> {
