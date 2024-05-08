@@ -1,23 +1,24 @@
 import {
-  BadRequestException,
+  // BadRequestException,
   Injectable,
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
 import { UserService } from '../user/user.service';
-import { CreateUserDto, SignInUserDto } from '../types/types';
+import { IUser } from '../types/types';
 import * as argon2 from 'argon2';
 import { JwtService } from '@nestjs/jwt';
+// import { CreateUserDto } from 'src/dto/createUserDto';
 
 @Injectable()
 export class AuthService {
   constructor(
-    private usersService: UserService,
+    private userService: UserService,
     private jwtService: JwtService,
   ) {}
 
   async validateUser(email: string, password: string): Promise<any> {
-    const user = await this.usersService.findOneByEmail(email);
+    const user = await this.userService.findOne(email);
     if (!user) {
       throw new UnauthorizedException('User not found');
     }
@@ -28,21 +29,16 @@ export class AuthService {
     return user;
   }
 
-  async signIn(payload: SignInUserDto) {
-    const user = await this.usersService.findOneByEmail(payload.email);
-    if (!user) {
-      throw new NotFoundException('User not found');
-    }
-    const passwordMatches = await argon2.verify(
-      payload.password,
-      user.password,
-    );
-    if (!passwordMatches) {
-      throw new BadRequestException('Invalid password');
-    }
-    const tokens = await this.getTokens(user.id, user.email);
-    await this.updateRefreshToken(user.id, tokens.refresh_token);
-    return tokens;
+  async signIn(user: IUser) {
+    const { id, email } = user;
+    return {
+      id,
+      email,
+      token: this.jwtService.sign({
+        id: user.id,
+        email: user.email,
+      }),
+    };
   }
 
   async getTokens(id: number, email: string) {
@@ -55,28 +51,28 @@ export class AuthService {
 
   async updateRefreshToken(id: number, refreshToken: string) {
     const hashFromRefreshToken = await argon2.hash(refreshToken);
-    await this.usersService.update(id, { refreshToken: hashFromRefreshToken });
+    await this.userService.update(id, { refreshToken: hashFromRefreshToken });
   }
 
-  async signUp(newUser: CreateUserDto) {
-    const existingUser = await this.usersService.findOneByEmail(newUser.email);
-    if (existingUser) {
-      throw new BadRequestException('User with this email already exists');
-    }
-    const user = await this.usersService.create(newUser);
+  // async signUp(newUser: CreateUserDto) {
+  //   const existingUser = await this.userService.findOne(newUser.email);
+  //   if (existingUser) {
+  //     throw new BadRequestException('User with this email already exists');
+  //   }
+  //   const user = await this.userService.create(newUser);
 
-    const payload = { sub: user.id, email: user.email };
-    const accessToken = await this.jwtService.signAsync(payload);
+  //   const payload = { sub: user.id, email: user.email };
+  //   const accessToken = await this.jwtService.signAsync(payload);
 
-    return { access_token: accessToken };
-  }
+  //   return { access_token: accessToken };
+  // }
 
   async signOut(user: any) {
-    const existingUser = await this.usersService.findOneByEmail(user.email);
+    const existingUser = await this.userService.findOne(user.email);
     if (!existingUser) {
       throw new NotFoundException('User not found');
     }
-    await this.usersService.update(user.id, { refreshToken: null });
+    await this.userService.update(user.id, { refreshToken: null });
 
     return { message: 'Signed out successfully' };
   }

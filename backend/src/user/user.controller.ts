@@ -5,12 +5,15 @@ import {
   Body,
   Put,
   Param,
-  Delete,
+  // Delete,
   NotFoundException,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 
 import { UserService } from './user.service';
 import { User } from 'src/entities/User';
+import { CreateUserDto } from 'src/dto/createUserDto';
 
 @Controller('users')
 export class UserController {
@@ -21,19 +24,9 @@ export class UserController {
     return this.userService.getUserRepository().find();
   }
 
-  @Get(':id')
-  async findOne(@Param('id') id: number): Promise<User> {
-    const user = await this.userService.findOne(id);
-    if (!user) {
-      throw new NotFoundException('User does not exist!');
-    } else {
-      return user;
-    }
-  }
-
   @Get(':email')
-  async findOneByEmail(@Param('email') email: string): Promise<User> {
-    const user = await this.userService.findOneByEmail(email);
+  async findOne(@Param('email') email: string): Promise<User> {
+    const user = await this.userService.findOne(email);
     if (!user) {
       throw new NotFoundException('User does not exist!');
     } else {
@@ -42,8 +35,9 @@ export class UserController {
   }
 
   @Post()
-  async create(@Body() user: User): Promise<User> {
-    return this.userService.create(user);
+  @UsePipes(new ValidationPipe())
+  async create(@Body() createUserDto: CreateUserDto) {
+    return this.userService.create(createUserDto);
   }
 
   @Put(':id')
@@ -51,12 +45,12 @@ export class UserController {
     return this.userService.update(id, user);
   }
 
-  @Delete(':id')
-  async delete(@Param('id') id: number): Promise<any> {
-    const user = await this.userService.findOne(id);
-    if (!user) {
-      throw new NotFoundException('User does not exist!');
-    }
-    return this.userService.delete(id);
-  }
+  // @Delete(':email')
+  // async delete(@Param('email') email: string): Promise<any> {
+  //   const user = await this.userService.findOne(email);
+  //   if (!user) {
+  //     throw new NotFoundException('User does not exist!');
+  //   }
+  //   return this.userService.delete(email);
+  // }
 }

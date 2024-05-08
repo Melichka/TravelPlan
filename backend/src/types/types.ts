@@ -1,14 +1,4 @@
-export type CreateUserDto = {
+export interface IUser {
+  id: number;
   email: string;
-  password: string;
-};
-
-export type SignInUserDto = {
-  email: string;
-  password: string;
-};
-
-export type UserDto = {
-  email: string;
-  password: string;
-};
+}

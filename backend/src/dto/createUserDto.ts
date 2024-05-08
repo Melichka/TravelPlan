@@ -4,6 +4,9 @@ export class CreateUserDto {
   @IsEmail()
   email: string;
 
-  @MinLength(6, { message: 'Password must be more then 6 symbols' })
+  @MinLength(8, { message: 'Password must be more then 8 symbols' })
   password: string;
+
+  @MinLength(8, { message: 'Password must be more then 8 symbols' })
+  checkpassword: string;
 }

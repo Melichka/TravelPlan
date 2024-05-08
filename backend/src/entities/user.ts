@@ -15,10 +15,10 @@ export class User {
   id: number;
 
   @IsEmail()
-  @Column({ name: 'name', length: 70, nullable: false })
+  @Column({ name: 'name', length: 70, nullable: true })
   name: string;
 
-  @Column({ name: 'surname', length: 70, nullable: false })
+  @Column({ name: 'surname', length: 70, nullable: true })
   surname: string;
 
   @Column({ name: 'email', length: 180, nullable: false })
