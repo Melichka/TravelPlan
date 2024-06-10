@@ -7,10 +7,12 @@ import {
   Param,
   Delete,
   NotFoundException,
+  UseGuards,
 } from '@nestjs/common';
 
 import { City } from 'src/entities/City';
 import { CityService } from './city.service';
+import { AdminGuard } from 'src/guards/admin.guard';
 
 @Controller('city')
 export class CityController {
@@ -31,7 +33,13 @@ export class CityController {
     }
   }
 
+  @Get('searchid/:id')
+  async findOneWithTags(@Param('id') id: number): Promise<City> {
+    return this.cityService.findOneWithTags(id); // Вызываем метод сервиса
+  }
+
   @Post()
+  @UseGuards(AdminGuard)
   async create(@Body() entertainment: City): Promise<City> {
     return this.cityService.create(entertainment);
   }
@@ -39,6 +47,11 @@ export class CityController {
   @Put(':id')
   async update(@Param('id') id: number, @Body() city: City): Promise<any> {
     return this.cityService.update(id, city);
+  }
+
+  @Get('search/:name')
+  searchByName(@Param('name') name: string) {
+    return this.cityService.searchByName(name);
   }
 
   @Delete(':id')

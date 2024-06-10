@@ -1,21 +1,19 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-
 import { Select, MenuItem } from "@mui/material";
-
 import styles from "./styles.module.scss"
 
 const lngs = {
-  en: { flag: "public/assets/flags/usa.png" },
-  ru: { flag: "public/assets/flags/russia.jpg" },
+  en: { flag: "/assets/flags/usa.png" },
+  ru: { flag: "/assets/flags/russia.jpg" },
 };
 
-export const SwitchLanguage = () => {
+export const SwitchLanguage = ({ changeLanguage }) => {
   const { i18n } = useTranslation();
 
   const handleChangeLanguage = (event) => {
     const selectedLanguage = event.target.value;
-    i18n.changeLanguage(selectedLanguage);
+    changeLanguage(selectedLanguage);
   };
 
   return (

@@ -13,6 +13,18 @@
   background-size: 100%;
 }
 
+.name {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.name {
+  color: white;
+  font-size: 26px;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -109,4 +121,11 @@
   margin-left: 3%;
   font-size: $medium-font-size;
   color: $bg-color;
+}
+
+.tagItem {
+  background-color: $main-pink;
+  padding: 4px 8px;
+  border-radius: 16px;
+  margin-right: 8px;
 }

@@ -24,6 +24,10 @@ export class TypeService {
     return this.typeRepository.save(newType);
   }
 
+  async findByName(name: string): Promise<Type | undefined> {
+    return this.typeRepository.findOne({ where: { name } });
+  }
+
   async update(id: number, type: Partial<Type>): Promise<Type> {
     await this.typeRepository.update(id, type);
     return this.typeRepository.findOne({ where: { id } });

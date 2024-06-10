@@ -32,9 +32,10 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" Component={SearchPage} />
-            <Route path="/city" Component={CityPage} />
+            <Route path="/city/:id" Component={CityPage} />
             <Route path="/sign-in" Component={SignInPage} />
             <Route path="/profile" Component={ProfilePage} />
+            <Route path="/sign-out" Component={SearchPage} />
             <Route path="*" element={<h3>404</h3>} />
           </Routes>
         </BrowserRouter>

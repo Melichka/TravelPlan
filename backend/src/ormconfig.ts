@@ -1,12 +1,10 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { City } from './entities/City';
-import { Entertainment } from './entities/Entertainment';
-import { Hotel } from './entities/Hotel';
-import { Sight } from './entities/Sight';
 import { Tag } from './entities/Tag';
 import { User } from './entities/User';
 import * as dotenv from 'dotenv';
 import { Place } from './entities/Place';
+import { Type } from './entities/Type';
 
 dotenv.config();
 
@@ -20,5 +18,5 @@ export const ormConfig: TypeOrmModuleOptions = {
   type: 'sqlite',
   database: envKeys.dbName,
   synchronize: true,
-  entities: [City, User, Entertainment, Sight, Hotel, Tag, Place],
+  entities: [City, User, Tag, Place, Type],
 };

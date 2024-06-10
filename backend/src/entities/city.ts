@@ -1,4 +1,11 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToMany,
+  JoinTable,
+  OneToMany,
+} from 'typeorm';
 import { Tag } from './Tag';
 import { Place } from './Place';
 
@@ -20,8 +27,13 @@ export class City {
   favourite: boolean;
 
   @ManyToMany(() => Tag, (tag) => tag.cities)
+  @JoinTable({
+    name: 'city_tags',
+    joinColumn: { name: 'city_id', referencedColumnName: 'id' },
+    inverseJoinColumn: { name: 'tag_id', referencedColumnName: 'id' },
+  })
   tags: Tag[];
 
-  @ManyToMany(() => Place, (place) => place.cities)
+  @OneToMany(() => Place, (place) => place.city)
   places: Place[];
 }

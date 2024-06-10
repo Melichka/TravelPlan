@@ -1,6 +1,9 @@
 {
+  "CityButton": "Город",
+  "ProfileButton": "Профиль",
   "SignInButton": "Войти",
   "SignUpButton": "Регистрация",
+  "SignOutButton": "Выйти",
   "SupportButton": "Поддержка",
   "SightButton": "Достопримечательности",
   "HotelButton": "Отели",

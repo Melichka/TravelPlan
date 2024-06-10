@@ -9,16 +9,21 @@
     "@nestjs/config": "^3.2.2",
     "@nestjs/jwt": "^10.2.0",
     "@nestjs/passport": "^10.0.3",
+    "@nestjs/platform-express": "^10.3.8",
     "@nestjs/swagger": "^7.2.0",
+    "@nestjs/testing": "^10.3.9",
     "@nestjs/typeorm": "^10.0.1",
     "argon2": "^0.40.1",
     "bcrypt": "^5.1.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.23.1",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
     "typeorm": "^0.3.20"
@@ -26,6 +31,7 @@
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/passport-jwt": "^4.0.1",
+    "@types/react-router-dom": "^5.3.3",
     "lerna": "^8.0.2"
   },
   "scripts": {

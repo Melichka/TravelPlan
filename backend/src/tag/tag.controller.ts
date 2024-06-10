@@ -7,10 +7,13 @@ import {
   Param,
   Delete,
   NotFoundException,
+  UseGuards,
 } from '@nestjs/common';
 
 import { TagService } from './tag.service';
 import { Tag } from 'src/entities/Tag';
+import { AdminGuard } from 'src/guards/admin.guard';
+import { CreateTagDto } from 'src/dto/createTagDto';
 
 @Controller('tag')
 export class TagController {
@@ -32,8 +35,9 @@ export class TagController {
   }
 
   @Post()
-  async create(@Body() tag: Tag): Promise<Tag> {
-    return this.tagService.create(tag);
+  @UseGuards(AdminGuard)
+  async create(@Body() createTagDto: CreateTagDto) {
+    return this.tagService.create(createTagDto);
   }
 
   @Put(':id')

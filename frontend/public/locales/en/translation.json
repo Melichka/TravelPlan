@@ -1,6 +1,9 @@
 {
+  "CityButton" : "City",
+  "ProfileButton": "Profile",
   "SignInButton": "Sign In",
   "SignUpButton": "Sign Up",
+  "SignOutButton": "Sign Out",
   "SupportButton": "Support",
   "SightButton": "Sight",
   "HotelButton": "Hotel",

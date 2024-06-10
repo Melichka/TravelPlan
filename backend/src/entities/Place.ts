@@ -1,45 +1,40 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  ManyToMany,
-  BaseEntity,
-  JoinTable,
-} from 'typeorm';
-import { User } from './User';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, ManyToOne, OneToOne, JoinTable, JoinColumn } from 'typeorm';
+import { Tag } from './Tag';
 import { City } from './City';
+import { Type } from './Type';
 
 @Entity('place')
-export class Place extends BaseEntity {
+export class Place {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ name: 'name', length: 70, nullable: false })
+  @Column({ name: 'name', length: 100, nullable: false })
   name: string;
 
-  @Column({ name: 'description', length: 180, nullable: false })
+  @Column({ name: 'description', length: 255, nullable: false })
   description: string;
 
-  @Column({ name: 'imageUrl', nullable: false })
-  imageUrl: string;
+  @Column({ name: 'imgUrl', length: 255, nullable: false })
+  imgUrl: string;
 
-  @Column({ name: 'favourite', nullable: false })
-  favourite: boolean;
+  @Column({ name: 'opening_time', type: 'datetime', nullable: true })
+  openingTime: Date;
 
-  @ManyToMany(() => User, (user) => user.places)
-  users: User[];
+  @Column({ name: 'closing_time', type: 'datetime', nullable: true })
+  closingTime: Date;
 
-  @ManyToMany(() => City)
+  @ManyToOne(() => City, (city) => city.places)
+  city: City;
+
+  @ManyToMany(() => Tag, (tag) => tag.places)
   @JoinTable({
-    name: 'place_city',
-    joinColumn: {
-      name: 'place_id',
-      referencedColumnName: 'id',
-    },
-    inverseJoinColumn: {
-      name: 'city_id',
-      referencedColumnName: 'id',
-    },
+    name: 'place_tags',
+    joinColumn: { name: 'place_id', referencedColumnName: 'id' },
+    inverseJoinColumn: { name: 'tag_id', referencedColumnName: 'id' },
   })
-  cities: City[];
+  tags: Tag[];
+
+  @OneToOne(() => Type)
+  @JoinColumn({ name: 'place_type_id' })
+  type: Type;
 }

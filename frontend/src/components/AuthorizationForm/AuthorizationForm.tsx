@@ -1,27 +1,23 @@
 import React, { useState } from "react";
 import { PropsWithChildren } from "react";
-
 import { Typography } from "@mui/material";
-
-import { VARIANTS } from "src/pages/signIn/constants";
-
-import { LoginForm } from "../LoginForm";
-import { SubmitButton } from "../SubmitButton";
 import { Switcher } from "../Switcher";
 import { RegisterForm } from "../RegisterForm";
-
+import { LoginForm } from "../LoginForm";
 import styles from "./styles.module.scss";
 import { t } from "i18next";
 
 type Props = PropsWithChildren<{
   formSwitch: boolean;
   setFormSwitch: (value: boolean) => void;
+  onSignInSuccess: (token: string) => void;
 }>;
 
 export const AuthorizationForm: React.FC<Props> = ({
   children,
   formSwitch,
   setFormSwitch,
+  onSignInSuccess,
 }) => {
   const [currentTab, setCurrentTab] = useState(true);
 
@@ -36,10 +32,13 @@ export const AuthorizationForm: React.FC<Props> = ({
         <Switcher isActiveSwitcher={currentTab} onClick={handleSwitch} />
       </div>
       <div className={styles.field}>
-        {currentTab ? <LoginForm /> : <RegisterForm />}
+        {currentTab ? (
+          <LoginForm onSignInSuccess={onSignInSuccess} />
+        ) : (
+          <RegisterForm />
+        )}
         {children}
       </div>
-      <SubmitButton />
       <div className={styles.bottom}>
         <Typography className={styles.text}>
           {t("description.sign-in")}

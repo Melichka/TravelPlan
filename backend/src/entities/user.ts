@@ -45,7 +45,7 @@ export class User {
   })
   tags: Tag[];
 
-  @ManyToMany(() => Place, (place) => place.users)
+  @ManyToMany(() => Place)
   @JoinTable({
     name: 'favorite',
     joinColumn: {

@@ -1,9 +1,13 @@
 import React from "react";
+import { InputField } from "../InputField";
 import { useTranslation } from "react-i18next";
 
-import { InputField } from "src/components/InputField";
+interface PasswordProps {
+  setPassword: React.Dispatch<React.SetStateAction<string>>;
+}
 
-export const Password = () => {
+export const Password: React.FC<PasswordProps> = ({ setPassword }) => {
   const { t } = useTranslation();
-  return <InputField placeholder={t("Password")} isPassword></InputField>;
+
+  return <InputField placeholder={t("Password")} isPassword onChange={(e) => setPassword(e.target.value)} />;
 };
